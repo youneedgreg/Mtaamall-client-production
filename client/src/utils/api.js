@@ -131,7 +131,7 @@ export const getAllFav = async (email, token) => {
       }
     );
       
-    return res.data["favResidenciesID"]
+    return res.data["favBusinessesID"]
 
   }catch(e)
   {
