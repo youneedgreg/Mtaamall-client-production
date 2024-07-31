@@ -29,6 +29,7 @@ const Hero = () => {
           <div className="flexColStart secondaryText flexhero-des">
             <span>Find customers and let customers find you.</span>
             <span>Forget all difficulties in finding business for you</span>
+            <span><b>Log in to enjoy all our features</b></span>
           </div>
 
           {/* Find Stores Button */}

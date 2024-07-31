@@ -1,5 +1,5 @@
 import React from "react";
-import './PropertyCard.css';
+import './ShopCard.css';
 import { truncate } from 'lodash';
 import { useNavigate } from "react-router-dom";
 import Heart from "../Heart/Heart";

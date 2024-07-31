@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
-import "./Properties.css";
+import "./Shops.css";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
-import PropertyCard from "../../components/PropertyCard/PropertyCard";
+import PropertyCard from "../../components/ShopCard/ShopCard";
 const Properties = () => {
   const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = useState("");

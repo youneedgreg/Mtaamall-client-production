@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
-import PropertyCard from "../../components/PropertyCard/PropertyCard";
-import "../Properties/Properties.css";
+import PropertyCard from "../../components/ShopCard/ShopCard";
+import "../Shops/Properties.css";
 import UserDetailContext from "../../context/UserDetailContext";
 
 const Bookings = () => {
