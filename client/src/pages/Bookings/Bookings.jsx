@@ -3,7 +3,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
 import PropertyCard from "../../components/ShopCard/ShopCard";
-import "../Shops/Properties.css";
+import "../Shops/Shops.css";
 import UserDetailContext from "../../context/UserDetailContext";
 
 const Bookings = () => {
