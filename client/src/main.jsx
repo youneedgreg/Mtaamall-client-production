@@ -10,9 +10,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
      domain="dev-spp8057zfmej1qlr.us.auth0.com"
      clientId="MCxfawfBW6x8suqFITPhkFB10jwdaqKE"
      authorizationParams={{
-      redirect_uri: "http://localhost:3000"
+      redirect_uri: "https://mtaamall.vercel.app"
      }}
-     audience="http://localhost:3001"
+     audience="https://mtaamallserver.vercel.app"
      scope="openid profile email"
     >
       <App />
