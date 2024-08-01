@@ -21,7 +21,7 @@ const Hero = () => {
                 type: "ease-in",
               }}
             >
-              Why register <br />
+              Why register register register <br />
               with MtaaMall?
               <br />
             </motion.h1>
