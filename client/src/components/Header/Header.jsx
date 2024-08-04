@@ -35,7 +35,7 @@ const Header = () => {
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
         <Link to="/">
-          <h1>Mtaa-Mall</h1>
+          <h1>MtaaMall</h1>
         </Link>
 
         {/* menu */}
