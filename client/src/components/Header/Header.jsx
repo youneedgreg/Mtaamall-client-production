@@ -26,7 +26,7 @@ const Header = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate("/bookings");
+      navigate("/shoppers");
     }
   }, [isAuthenticated, navigate]);
 
