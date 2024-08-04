@@ -24,13 +24,6 @@
   font-size: 2rem;
 }
 
-.user-section {
-  background-color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 25px;
-  display: flex;
-  align-items: center;
-}
 
 /* Categories */
 .categories {

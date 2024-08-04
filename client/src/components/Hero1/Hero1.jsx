@@ -14,11 +14,7 @@ const Hero1 = () => {
       <div className="paddings innerWidth flexCenter hero-container">
         {/* Header */}
         <div className="flexCenter header">
-          <h1>MtaaMall</h1>
           <SearchBar filter={filter} setFilter={setFilter} />
-          <div className="user-section">
-            <span>John Doe</span>
-          </div>
         </div>
 
         {/* Categories */}
