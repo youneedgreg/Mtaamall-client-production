@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
@@ -16,19 +16,12 @@ const Header = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const { validateLogin } = useAuthCheck();
-  const navigate = useNavigate();
 
   const handleAddPropertyClick = () => {
     if (validateLogin()) {
       setModalOpened(true);
     }
   };
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate("/shoppers");
-    }
-  }, [isAuthenticated, navigate]);
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
@@ -48,9 +41,10 @@ const Header = () => {
             className="flexCenter h-menu"
             style={getMenuStyles(menuOpened)}
           >
-            {!isAuthenticated && <a href="http://localhost:5173">Business</a>}
+            {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
 
             <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
+
 
             {/* login button */}
             {!isAuthenticated ? (
