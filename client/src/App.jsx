@@ -38,7 +38,7 @@ function App() {
                 </Route>
                 <Route path="/bookings" element={<Bookings />} />
                 <Route path="/favourites" element={<Favourites />} />
-                <Route path="/shoppers" element={<Shoppers />} /> // Add the new route
+                <Route path="/shoppers" element={<Shoppers />} /> 
               </Route>
             </Routes>
           </Suspense>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
@@ -10,17 +10,6 @@ import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
 import useAuthCheck from "../../hooks/useAuthCheck.jsx";
 
-/**
- * Header component props.
- *
- * @typedef {Object} HeaderProps
- */
-
-/**
- * Header component.
- *
- * @type {React.FC<HeaderProps>}
- */
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
@@ -29,17 +18,17 @@ const Header = () => {
   const { validateLogin } = useAuthCheck();
   const history = useHistory();
 
-  useEffect(() => {
-    if (isAuthenticated) {
-      history.push('/properties'); // redirect to properties page
-    }
-  }, [isAuthenticated, history]);
-
   const handleAddPropertyClick = () => {
     if (validateLogin()) {
       setModalOpened(true);
     }
   };
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push("/properties");
+    }
+  }, [isAuthenticated, history]);
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
@@ -64,7 +53,7 @@ const Header = () => {
             <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
 
             {/* login button */}
-            {!isAuthenticated? (
+            {!isAuthenticated ? (
               <button className="button" onClick={loginWithRedirect}>
                 Login
               </button>
@@ -77,7 +66,7 @@ const Header = () => {
         {/* for medium and small screens */}
         <div
           className="menu-icon"
-          onClick={() => setMenuOpened((prev) =>!prev)}
+          onClick={() => setMenuOpened((prev) => !prev)}
         >
           <BiMenuAltRight size={30} />
         </div>
