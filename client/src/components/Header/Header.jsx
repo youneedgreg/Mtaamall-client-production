@@ -4,7 +4,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
@@ -16,7 +16,7 @@ const Header = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const { validateLogin } = useAuthCheck();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleAddPropertyClick = () => {
     if (validateLogin()) {
@@ -26,9 +26,9 @@ const Header = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      history.push("/properties");
+      navigate("/bookings");
     }
-  }, [isAuthenticated, history]);
+  }, [isAuthenticated, navigate]);
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
