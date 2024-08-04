@@ -14,7 +14,9 @@ const Hero1 = () => {
       <div className="paddings innerWidth flexCenter hero-container">
         {/* Header */}
         <div className="flexCenter header">
-          <SearchBar filter={filter} setFilter={setFilter} />
+          <div className="search-bar-wrapper">
+            <SearchBar filter={filter} setFilter={setFilter} />
+          </div>
         </div>
 
         {/* Categories */}

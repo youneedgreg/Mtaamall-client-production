@@ -11,19 +11,23 @@
   align-items: flex-end;
 }
 
-
 /* Header */
 .header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centering the content */
   align-items: center;
+}
+
+.search-bar-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centering the search bar */
 }
 
 .header h1 {
   font-size: 2rem;
 }
-
 
 /* Categories */
 .categories {
@@ -107,19 +111,20 @@
     gap: 0.5rem;
   }
 }
-.hero-container .search-bar{
+
+.hero-container .search-bar {
   width: clamp(12rem, 100%, 28rem);
   border-radius: 30px;
   border: 1px solid rgba(120, 120, 120, 0.374);
   flex-wrap: nowrap;
 }
 
-.hero-container .search-bar .button{
+.hero-container .search-bar .button {
   border-radius: 30px;
   font-size: 12px;
   padding: 10px 15px;
 }
 
-.hero-container .search-bar input{
+.hero-container .search-bar input {
   width: 70%;
 }
