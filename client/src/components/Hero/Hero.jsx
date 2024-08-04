@@ -9,21 +9,6 @@ const Hero = () => {
   return (
     <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
-        {/* right side */}
-        <div className="flexCenter hero-right">
-          <motion.div
-            initial={{ x: "7rem", opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{
-              duration: 2,
-              type: "ease-in",
-            }}
-            className="image-container"
-          >
-            <img src="./hero-image.jpeg" alt="houses" />
-          </motion.div>
-        </div>
-
         {/* left side */}
         <div className="flexColStart hero-left">
           <div className="hero-title">
@@ -78,6 +63,21 @@ const Hero = () => {
               <span className="secondaryText">Connections made.</span>
             </div>
           </div>
+        </div>
+
+        {/* right side */}
+        <div className="flexCenter hero-right">
+          <motion.div
+            initial={{ x: "7rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "ease-in",
+            }}
+            className="image-container"
+          >
+            <img src="./hero-image.jpeg" alt="houses" />
+          </motion.div>
         </div>
       </div>
     </section>

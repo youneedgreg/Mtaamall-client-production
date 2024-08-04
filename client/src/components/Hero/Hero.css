@@ -6,10 +6,12 @@
   background-color: rgb(220, 161, 161);
 }
 
+
 .hero-container {
   justify-content: space-around;
   align-items: flex-end; 
 }
+
 
 /* left side */
 .hero-left {
@@ -83,6 +85,7 @@
 }
 
 /* right side */
+
 .image-container {
   width: 30rem;
   height: 35rem;
