@@ -1,70 +1,83 @@
 import React from "react";
 import "./Hero1.css";
-import { FaStore, FaUtensils, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa"; // Importing icons
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
+import { FaStore } from "react-icons/fa"; // Importing store icon from react-icons
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar"; // Importing SearchBar
 
 const Hero1 = () => {
-  const [filter, setFilter] = React.useState("");
-
   return (
     <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
-        {/* Header */}
-        <div className="flexCenter header">
-          <h1>MtaaMall</h1>
-          <SearchBar filter={filter} setFilter={setFilter} />
-          <div className="user-section">
-            <span>John Doe</span>
+        {/* left side */}
+        <div className="flexColStart hero-left">
+          <div className="hero-title">
+            <div className="orange-circle" />
+            <motion.h1
+              initial={{ y: "2rem", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 2,
+                type: "ease-in",
+              }}
+            >
+              Why register <br />
+             
+              <br />
+            </motion.h1>
+          </div>
+          <div className="flexColStart secondaryText flexhero-des">
+            <span>Find customers and let customers find you.</span>
+            <span>Forget all difficulties in finding business for you</span>
+            <span><b>Log in to enjoy all our features</b></span>
+          </div>
+
+          {/* Find Stores Button */}
+          <div className="flexCenter">
+            <Link to="/properties">
+            <button className="find-stores-button">
+              Find Stores <FaStore className="store-icon" />
+            </button>
+            </Link>
+          </div>
+
+          <div className="flexCenter stats">
+            <div className="flexColCenter stat">
+              <span>
+                <CountUp start={8800} end={9000} duration={4} /> <span>+</span>
+              </span>
+              <span className="secondaryText">Customers registered.</span>
+            </div>
+
+            <div className="flexColCenter stat">
+              <span>
+                <CountUp start={1950} end={2000} duration={4} /> <span>+</span>
+              </span>
+              <span className="secondaryText">Businesses registered.</span>
+            </div>
+
+            <div className="flexColCenter stat">
+              <span>
+                <CountUp end={28} /> <span>+</span>
+              </span>
+              <span className="secondaryText">Connections made.</span>
+            </div>
           </div>
         </div>
 
-        {/* Categories */}
-        <div className="flexCenter categories">
-          <div className="category">
-            <FaUtensils size={50} />
-            <span>Eatery</span>
-          </div>
-          <div className="category">
-            <FaCut size={50} />
-            <span>Grooming services</span>
-          </div>
-          <div className="category">
-            <FaGamepad size={50} />
-            <span>Recreational services</span>
-          </div>
-          <div className="category">
-            <FaTools size={50} />
-            <span>Electronics services</span>
-          </div>
-          <div className="category">
-            <FaCamera size={50} />
-            <span>Photography</span>
-          </div>
-        </div>
-
-        {/* Welcome text */}
-        <div className="welcome-text">
-          <h2>Welcome to MtaaMall,</h2>
-          <p>Where we unleash the power of endless possibilities in every click.</p>
-        </div>
-
-        {/* Banners */}
-        <div className="banners">
-          <div className="banner">
-            <img src="./hero-image.jpeg" alt="MtaaMall logo" />
-            <span>Find Stores</span>
-          </div>
-          <div className="banner">
-            <img src="./hero-image.jpeg" alt="My Stores" />
-            <span>My Stores</span>
-          </div>
-          <div className="banner">
-            <img src="./hero-image.jpeg" alt="Hot Deals" />
-            <span>Hot Deals!!!</span>
-          </div>
+        {/* right side */}
+        <div className="flexCenter hero-right">
+          <motion.div
+            initial={{ x: "7rem", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{
+              duration: 2,
+              type: "ease-in",
+            }}
+            className="image-container"
+          >
+            <img src="./hero-image.jpeg" alt="houses" />
+          </motion.div>
         </div>
       </div>
     </section>
