@@ -19,7 +19,6 @@ const Website = () => {
       <Value />
       <Contact />
       <GetStarted />
-      <Footer />
     </div>
   );
 }
