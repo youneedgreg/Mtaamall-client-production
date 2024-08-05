@@ -1,10 +1,10 @@
 import React from "react";
 import "./Hero1.css";
-import { FaStore, FaUtensils, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa"; // Importing icons
+import { Restaurant, Cut, SportsEsports, Build, CameraAlt } from "@mui/icons-material";
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar"; // Importing SearchBar
+import SearchBar from "../SearchBar/SearchBar";
 
 const Hero1 = () => {
   const [filter, setFilter] = React.useState("");
@@ -22,23 +22,23 @@ const Hero1 = () => {
         {/* Categories */}
         <div className="flexCenter categories">
           <div className="category">
-            <FaUtensils size={50} />
+            <Restaurant style={{ fontSize: 50 }} />
             <span>Eatery</span>
           </div>
           <div className="category">
-            <FaCut size={50} />
+            <Cut style={{ fontSize: 50 }} />
             <span>Grooming services</span>
           </div>
           <div className="category">
-            <FaGamepad size={50} />
+            <SportsEsports style={{ fontSize: 50 }} />
             <span>Recreational services</span>
           </div>
           <div className="category">
-            <FaTools size={50} />
+            <Build style={{ fontSize: 50 }} />
             <span>Electronics services</span>
           </div>
           <div className="category">
-            <FaCamera size={50} />
+            <CameraAlt style={{ fontSize: 50 }} />
             <span>Photography</span>
           </div>
         </div>
