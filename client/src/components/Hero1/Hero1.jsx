@@ -1,9 +1,12 @@
 import React from "react";
 import "./Hero1.css";
-import { Restaurant, Cut, SportsEsports, Build, CameraAlt } from "@mui/icons-material";
-import CountUp from "react-countup";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
+import {
+  HomeIcon,
+  ScissorsIcon,
+  PuzzlePieceIcon,
+  CogIcon,
+  CameraIcon,
+} from "@heroicons/react/solid";
 import SearchBar from "../SearchBar/SearchBar";
 
 const Hero1 = () => {
@@ -22,23 +25,23 @@ const Hero1 = () => {
         {/* Categories */}
         <div className="flexCenter categories">
           <div className="category">
-            <Restaurant style={{ fontSize: 50 }} />
+            <HomeIcon className="h-12 w-12" />
             <span>Eatery</span>
           </div>
           <div className="category">
-            <Cut style={{ fontSize: 50 }} />
+            <ScissorsIcon className="h-12 w-12" />
             <span>Grooming services</span>
           </div>
           <div className="category">
-            <SportsEsports style={{ fontSize: 50 }} />
+            <PuzzlePieceIcon className="h-12 w-12" />
             <span>Recreational services</span>
           </div>
           <div className="category">
-            <Build style={{ fontSize: 50 }} />
+            <CogIcon className="h-12 w-12" />
             <span>Electronics services</span>
           </div>
           <div className="category">
-            <CameraAlt style={{ fontSize: 50 }} />
+            <CameraIcon className="h-12 w-12" />
             <span>Photography</span>
           </div>
         </div>
