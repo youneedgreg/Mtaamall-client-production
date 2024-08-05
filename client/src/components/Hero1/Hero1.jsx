@@ -1,12 +1,10 @@
 import React from "react";
 import "./Hero1.css";
-import {
-  HomeIcon,
-  ScissorsIcon,
-  PuzzlePieceIcon,
-  CogIcon,
-  CameraIcon,
-} from "@heroicons/react/solid";
+import { FaStore, FaUtensils, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
+im
+import CountUp from "react-countup";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import SearchBar from "../SearchBar/SearchBar";
 
 const Hero1 = () => {
@@ -25,23 +23,23 @@ const Hero1 = () => {
         {/* Categories */}
         <div className="flexCenter categories">
           <div className="category">
-            <HomeIcon className="h-12 w-12" />
+            <FaUtensils size={50} />
             <span>Eatery</span>
           </div>
           <div className="category">
-            <ScissorsIcon className="h-12 w-12" />
+            <FaCut size={50} />
             <span>Grooming services</span>
           </div>
           <div className="category">
-            <PuzzlePieceIcon className="h-12 w-12" />
+            <FaGamepad size={50} />
             <span>Recreational services</span>
           </div>
           <div className="category">
-            <CogIcon className="h-12 w-12" />
+            <FaTools size={50} />
             <span>Electronics services</span>
           </div>
           <div className="category">
-            <CameraIcon className="h-12 w-12" />
+            <FaCamera size={50} />
             <span>Photography</span>
           </div>
         </div>
