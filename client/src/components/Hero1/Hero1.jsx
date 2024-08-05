@@ -66,7 +66,7 @@ const Hero1 = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             >
-              <img src="./hero-image.jpeg" alt="My Stores" />
+              <img src="../../../public/bookmark.png" alt="My Stores" />
               <span>My Stores</span>
             </motion.div>
           </Link>
