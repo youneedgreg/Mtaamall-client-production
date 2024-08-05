@@ -6,4 +6,9 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,},
+  resolve: {
+    alias: {
+      '@mui/material/utils': '@mui/material/esm/utils'
+    }
+  },
 })
