@@ -64,7 +64,7 @@ const Hero1 = () => {
           </div>
           <div className="banner">
             <img src="./hero-image.jpeg" alt="Hot Deals" />
-            <span color="red">Hot Deals!!!</span>
+            <span>Hot Deals!!!</span>
           </div>
         </div>
       </div>
