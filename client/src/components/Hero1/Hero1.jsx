@@ -1,11 +1,10 @@
 import React from "react";
 import "./Hero1.css";
-import { FaStore, FaUtensils, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
-im
+import { FaStore, FaUtensils, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa"; // Importing icons
 import CountUp from "react-countup";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar"; // Importing SearchBar
 
 const Hero1 = () => {
   const [filter, setFilter] = React.useState("");
