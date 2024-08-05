@@ -13,7 +13,8 @@ import Property from "./pages/Property/Property";
 import UserDetailContext from "./context/UserDetailContext";
 import Bookings from "./pages/Bookings/Bookings";
 import Favourites from "./pages/Favourites/Favourites";
-import Shoppers from "./pages/Shoppers/Shoppers"; // Import the Shoppers component
+import Shoppers from "./pages/Shoppers/Shoppers";
+import Deals from "./pages/Deals/Deals"
 
 function App() {
   const queryClient = new QueryClient();
@@ -38,7 +39,8 @@ function App() {
                 </Route>
                 <Route path="/bookings" element={<Bookings />} />
                 <Route path="/favourites" element={<Favourites />} />
-                <Route path="/shoppers" element={<Shoppers />} /> 
+                <Route path="/shoppers" element={<Shoppers />} />
+                <Route path="/deals" element={<Deals />} />
               </Route>
             </Routes>
           </Suspense>

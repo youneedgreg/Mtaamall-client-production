@@ -50,30 +50,36 @@ const Hero1 = () => {
 
         {/* Banners */}
         <div className="banners">
-          <motion.div
-            className="banner"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img src="./hero-image.jpeg" alt="MtaaMall logo" />
-            <span>Find Stores</span>
-          </motion.div>
-          <motion.div
-            className="banner"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img src="./hero-image.jpeg" alt="My Stores" />
-            <span>My Stores</span>
-          </motion.div>
-          <motion.div
-            className="banner"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <img src="./hero-image.jpeg" alt="Hot Deals" />
-            <span>Hot Deals!!!</span>
-          </motion.div>
+          <Link to="/shoppers">
+            <motion.div
+              className="banner"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src="./hero-image.jpeg" alt="MtaaMall logo" />
+              <span>Find Stores</span>
+            </motion.div>
+          </Link>
+          <Link to="/favourites">
+            <motion.div
+              className="banner"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src="./hero-image.jpeg" alt="My Stores" />
+              <span>My Stores</span>
+            </motion.div>
+          </Link>
+          <Link to="/deals">
+            <motion.div
+              className="banner"
+              whileHover={{ scale: 1.1 }}
+              transition={{ duration: 0.3 }}
+            >
+              <img src="./hero-image.jpeg" alt="Hot Deals" />
+              <span>Hot Deals!!!</span>
+            </motion.div>
+          </Link>
         </div>
       </div>
     </section>
