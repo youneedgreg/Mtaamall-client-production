@@ -79,21 +79,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem; /* Increased padding */
+  padding: 3rem; /* Increased padding */
   background-color: white;
   border-radius: 15px;
   text-align: center;
 }
 
 .banner img {
-  width: 150px; /* Increased width */
-  height: 150px; /* Increased height */
+  width: 200px; /* Increased width */
+  height: 200px; /* Increased height */
   object-fit: cover;
   border-radius: 10px;
 }
 
 .banner span {
   margin-top: 1rem; /* Increased margin-top */
+  font-size: 1.5rem; /* Increased font size */
   color: black;
 }
 
@@ -129,6 +130,4 @@
   padding: 10px 15px;
 }
 
-.hero-container .search-bar input {
-  width: 70%;
-}
+.hero-container .search-bar input
