@@ -97,6 +97,10 @@
   color: black;
 }
 
+.banner a {
+  text-decoration: none;
+}
+
 /* Mobile screens */
 @media (max-width: 640px) {
   .hero-container {
