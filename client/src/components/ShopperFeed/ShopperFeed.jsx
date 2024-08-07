@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import './ShopperFeed.css';
 import { truncate } from 'lodash';
 import { useNavigate } from "react-router-dom";
@@ -9,6 +9,20 @@ import { PuffLoader } from "react-spinners";
 const ShopCard = ({ card }) => {
   const { data, isError, isLoading } = useProperties();
   const navigate = useNavigate();
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const handleNextImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % card.images.length);
+  };
+
+  const handlePrevImage = (e) => {
+    e.stopPropagation();
+    setCurrentImageIndex((prevIndex) => 
+      prevIndex === 0 ? card.images.length - 1 : prevIndex - 1
+    );
+  };
+
   if (isError) {
     return (
       <div className="wrapper">
@@ -34,9 +48,13 @@ const ShopCard = ({ card }) => {
   return (
     <div className="shop-card" onClick={() => navigate(`../properties/${card.id}`)}>
       <div className="shop-card-images">
-        {card.images && card.images.length > 0 && card.images.map((image, index) => (
-          <img key={index} src={image} alt={`image-${index}`} />
-        ))}
+        {card.images && card.images.length > 0 && (
+          <>
+            <img src={card.images[currentImageIndex]} alt="property" />
+            <button className="prev" onClick={handlePrevImage}>&#10094;</button>
+            <button className="next" onClick={handleNextImage}>&#10095;</button>
+          </>
+        )}
       </div>
       <div className="shop-card-details">
         <h2>{truncate(card.title, { length: 15 })}</h2>
