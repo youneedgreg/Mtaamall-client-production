@@ -3,7 +3,9 @@ import './Shoppers.css';
 import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
 import SearchBar from '../../components/SearchBar/SearchBar';
 
+
 const Shoppers = () => {
+  const [filter, setFilter] = React.useState("");
   return (
     <div className="shoppers-container">
       <div className="left-column">
