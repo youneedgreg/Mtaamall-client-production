@@ -3,7 +3,7 @@ import './Shoppers.css';
 import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
 import SearchBar from '../../components/SearchBar/SearchBar';
 import ShopperFeed from '../../components/ShopperFeed/ShopperFeed';
-import { getAllProperties } from '../../api/api';
+import { getAllProperties } from '../../utils/api';
 
 const categories = [
   { name: "Eatery", icon: <FaStore size={50} /> },
