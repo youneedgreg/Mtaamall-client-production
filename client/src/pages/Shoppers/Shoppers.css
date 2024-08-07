@@ -1,87 +1,97 @@
 .shoppers-container {
-    display: flex;
-    height: 100vh;
-  }
+  display: flex;
+  height: 100vh;
+  background-color: white; /* Change the background color of the entire page */
+}
 
-  .left-column, .right-column, .middle-column {
-    border: 1px solid #ddd;
-  }
+.left-column, .right-column, .middle-column {
+  border: 1px solid #ddd;
+}
 
-  .left-column {
-    flex: 1;
-  }
+.left-column {
+  flex: 1;
+}
 
-  .middle-column {
-    flex: 3;
-    padding: 20px;
-    overflow-y: auto;
-  }
+.middle-column {
+  flex: 3;
+  padding: 20px;
+  overflow-y: auto;
+}
 
-  .right-column {
-    flex: 1;
-    position: relative;
-    transition: width 0.3s ease;
-  }
+.right-column {
+  flex: 1;
+  position: relative;
+  transition: width 0.3s ease;
+}
 
-  .icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
+.icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
 
-  .icon {
-    margin: 10px 0;
-    cursor: pointer;
-    padding: 5px;
-    transition: background 0.3s ease;
-  }
+.icon {
+  margin: 10px 0;
+  cursor: pointer;
+  padding: 5px;
+  transition: background 0.3s ease;
+}
 
-  .icon:hover {
-    background: #f0f0f0;
-  }
+.icon:hover {
+  background: #f0f0f0;
+}
 
-  .right-column:hover {
-    width: 200px; /* Adjust the width as needed */
-  }
+.right-column:hover {
+  width: 200px; /* Adjust the width as needed */
+}
 
-  .right-column:not(:hover) {
-    width: 50px; /* Adjust the width as needed */
-  }
+.right-column:not(:hover) {
+  width: 50px; /* Adjust the width as needed */
+}
 
-  .categories {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    width: 80%;
-    padding: 1rem;
-    background-color: #0beff9;
-    border-radius: 15px;
-  }
-  
-  .category {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .category span {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: black;
-  }
-  .shoppers-container .search-bar {
-    width: clamp(12rem, 100%, 28rem);
-    border-radius: 30px;
-    border: 1px solid rgba(120, 120, 120, 0.374);
-    flex-wrap: nowrap;
-  }
-  
-  .shoppers-container .search-bar .button {
-    border-radius: 30px;
-    font-size: 12px;
-    padding: 10px 15px;
-  }
-  
-  .shoppers-container .search-bar input
-  
+.categories {
+  display: flex;
+  gap: 0.5rem; /* Make the gaps smaller */
+  justify-content: space-between;
+  width: 60%; /* Reduce the width */
+  padding: 0.5rem; /* Reduce the padding */
+  background-color: #0beff9;
+  border-radius: 15px;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category span {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: black;
+}
+
+.search-bar {
+  width: clamp(12rem, 100%, 28rem);
+  border-radius: 30px;
+  border: 1px solid rgba(120, 120, 120, 0.374);
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5rem;
+  outline: none;
+}
+
+.search-bar .button {
+  border-radius: 30px;
+  font-size: 12px;
+  padding: 10px 15px;
+}
