@@ -54,7 +54,7 @@
   display: flex;
   gap: 0.5rem; /* Make the gaps smaller */
   justify-content: space-between;
-  width: 60%; /* Reduce the width */
+  width: 100%; /* Reduce the width */
   padding: 0.5rem; /* Reduce the padding */
   background-color: #0beff9;
   border-radius: 15px;
