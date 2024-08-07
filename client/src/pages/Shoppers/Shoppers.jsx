@@ -1,6 +1,7 @@
 import React from 'react';
 import './Shoppers.css';
 import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
+import SearchBar from '../../components/SearchBar/SearchBar';
 
 const Shoppers = () => {
   return (
