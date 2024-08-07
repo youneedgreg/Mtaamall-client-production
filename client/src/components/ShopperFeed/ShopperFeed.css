@@ -1,45 +1,81 @@
-.r-card {
-    gap: 0.6rem;
+.shop-card {
+    display: flex;
+    gap: 1rem;
     padding: 1rem;
     border-radius: 10px;
-    max-width: max-content;
-    margin: auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 300ms ease-in;
-    position: relative;
-    z-index: 0;
-  }
-  .r-card > svg {
-    position: absolute;
-    top: 25px;
-    right: 30px;
-    z-index: 1;
-  }
-  
-  .r-card > img {
-    width: 15rem;
-    height: 10rem;
-    border-radius: 10px;
-  }
-  .r-card > :nth-child(3) {
-    font-size: 1.2rem;
-    font-weight: 600;
-  }
-  .r-card > :nth-child(4) {
-    font-size: 1.5rem;
-  }
-  .r-card > :nth-child(5) {
-    font-size: 0.7rem;
-    width: 15rem;
-  }
-  
-  .r-card:hover {
-    scale: 1.025;
     cursor: pointer;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(136, 160, 255, 0.46) 217.91%
-    );
-    box-shadow: 0px 72px 49px -51px rgba(136, 160, 255, 0.21);
+    position: relative;
+  }
+  
+  .shop-card-images {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .shop-card-images img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .shop-card-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .shop-card-details h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .shop-card-details p {
+    margin: 0.5rem 0;
+  }
+  
+  .shop-card-category {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .shop-card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .shop-card-meta button {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 200ms ease-in;
+  }
+  
+  .shop-card-meta button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .shop-card-meta .shop-card-social {
+    color: green;
+  }
+  
+  .shop-card-meta .shop-card-message {
+    color: red;
+  }
+  
+  .shop-card-meta .shop-card-call {
+    color: blue;
+  }
+  
+  .shop-card:hover {
+    transform: scale(1.025);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   }
   

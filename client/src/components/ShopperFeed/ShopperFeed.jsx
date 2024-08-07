@@ -8,17 +8,24 @@ const ShopCard = ({ card }) => {
   const navigate = useNavigate();
 
   return (
-    <div className="flexColStart r-card" onClick={() => navigate(`../properties/${card.id}`)}>
-      <span className="primaryText">{truncate(card.title, { length: 15 })}</span>
-      <span className="secondaryText">{truncate(card.category, { length: 90 })}</span>
-      <span className="secondaryText">{truncate(card.city, { length: 90 })}</span>
-      <span className="secondaryText">{truncate(card.country, { length: 90 })}</span>
-      <p>About <span className="primaryText">{truncate(card.sdescription, { length: 15 })}</span></p>
-      <Heart id={card?.id} />
-      {card.images && card.images.length > 0 && (
-        <img src={card.images[0]} alt="home" />
-      )}
-
+    <div className="shop-card" onClick={() => navigate(`../properties/${card.id}`)}>
+      <div className="shop-card-images">
+        {card.images && card.images.length > 0 && card.images.map((image, index) => (
+          <img key={index} src={image} alt={`image-${index}`} />
+        ))}
+      </div>
+      <div className="shop-card-details">
+        <h2>{truncate(card.title, { length: 15 })}</h2>
+        <p className="shop-card-category">{truncate(card.category, { length: 90 })}</p>
+        <p>{truncate(card.city, { length: 90 })}, {truncate(card.country, { length: 90 })}</p>
+        <p>About <span>{truncate(card.sdescription, { length: 90 })}</span></p>
+        <div className="shop-card-meta">
+          <Heart id={card?.id} />
+          <button className="shop-card-social">Social media</button>
+          <button className="shop-card-message">Message</button>
+          <button className="shop-card-call">Call Us</button>
+        </div>
+      </div>
     </div>
   );
 };
