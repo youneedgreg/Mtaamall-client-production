@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
-import PropertyCard from "../../components/ShopCard/ShopCard";
+import ShopCard from "../../components/ShopCard/ShopCard";
 import "../Shops/Shops.css";
 import UserDetailContext from "../../context/UserDetailContext";
 
@@ -41,7 +41,7 @@ const Bookings = () => {
 
         <div className="paddings flexCenter properties">
           {
-            // data.map((card, i)=> (<PropertyCard card={card} key={i}/>))
+            // data.map((card, i)=> (<ShopCard card={card} key={i}/>))
 
             data
               .filter((property) =>
@@ -55,7 +55,7 @@ const Bookings = () => {
                   property.country.toLowerCase().includes(filter.toLowerCase())
               )
               .map((card, i) => (
-                <PropertyCard card={card} key={i} />
+                <ShopCard card={card} key={i} />
               ))
           }
         </div>

@@ -4,7 +4,7 @@ import { truncate } from 'lodash';
 import { useNavigate } from "react-router-dom";
 import Heart from "../Heart/Heart";
 
-const PropertyCard = ({ card }) => {
+const ShopCard = ({ card }) => {
   const navigate = useNavigate();
 
   return (
@@ -19,4 +19,4 @@ const PropertyCard = ({ card }) => {
   );
 };
 
-export default PropertyCard;
+export default ShopCard;

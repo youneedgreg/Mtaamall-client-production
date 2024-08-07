@@ -3,7 +3,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "./Shops.css";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
-import PropertyCard from "../../components/ShopCard/ShopCard";
+import ShopCard from "../../components/ShopCard/ShopCard";
 const Properties = () => {
   const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = useState("");
@@ -35,7 +35,7 @@ const Properties = () => {
 
         <div className="paddings flexCenter properties">
           {
-            // data.map((card, i)=> (<PropertyCard card={card} key={i}/>))
+            // data.map((card, i)=> (<ShopCard card={card} key={i}/>))
 
             data
               .filter(
@@ -45,7 +45,7 @@ const Properties = () => {
                   property.country.toLowerCase().includes(filter.toLowerCase())
               )
               .map((card, i) => (
-                <PropertyCard card={card} key={i} />
+                <ShopCard card={card} key={i} />
               ))
           }
         </div>
