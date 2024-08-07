@@ -15,6 +15,10 @@ const ShopCard = ({ card }) => {
       )}
       <span className="primaryText">{truncate(card.title, { length: 15 })}</span>
       <span className="secondaryText">{truncate(card.sdescription, { length: 90 })}</span>
+      <span className="secondaryText">{truncate(card.category, { length: 90 })}</span>
+      <span className="secondaryText">{truncate(card.city, { length: 90 })}</span>
+      <span className="secondaryText">{truncate(card.country, { length: 90 })}</span>
+      <span className="secondaryText">{truncate(card.socials, { length: 90 })}</span>
     </div>
   );
 };
