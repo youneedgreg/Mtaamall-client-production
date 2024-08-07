@@ -51,8 +51,12 @@ const ShopCard = ({ card }) => {
         {card.images && card.images.length > 0 && (
           <>
             <img src={card.images[currentImageIndex]} alt="property" />
-            <button className="prev" onClick={handlePrevImage}>&#10094;</button>
-            <button className="next" onClick={handleNextImage}>&#10095;</button>
+            {card.images.length > 1 && (
+              <>
+                <button className="prev" onClick={handlePrevImage}>&#10094;</button>
+                <button className="next" onClick={handleNextImage}>&#10095;</button>
+              </>
+            )}
           </>
         )}
       </div>
