@@ -9,17 +9,16 @@ const ShopCard = ({ card }) => {
 
   return (
     <div className="flexColStart r-card" onClick={() => navigate(`../properties/${card.id}`)}>
+      <span className="primaryText">{truncate(card.title, { length: 15 })}</span>
+      <span className="secondaryText">{truncate(card.category, { length: 90 })}</span>
+      <span className="secondaryText">{truncate(card.city, { length: 90 })}</span>
+      <span className="secondaryText">{truncate(card.country, { length: 90 })}</span>
+      <p>About <span className="primaryText">{truncate(card.sdescription, { length: 15 })}</span></p>
       <Heart id={card?.id} />
       {card.images && card.images.length > 0 && (
         <img src={card.images[0]} alt="home" />
       )}
-      <span className="primaryText">{truncate(card.title, { length: 15 })}</span>
-      <span className="secondaryText">{truncate(card.sdescription, { length: 90 })}</span>
-      <span className="secondaryText">{truncate(card.category, { length: 90 })}</span>
-      <span className="secondaryText">{truncate(card.city, { length: 90 })}</span>
-      <span className="secondaryText">{truncate(card.country, { length: 90 })}</span>
-      <span className="secondaryText">{truncate(card.socials.instagram, { length: 90 })}</span>
-      
+
     </div>
   );
 };
