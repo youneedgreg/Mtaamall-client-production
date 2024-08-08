@@ -74,7 +74,7 @@
   height: 60%;
   border-radius: 1rem;
   overflow: hidden;
-  margin: 3rem 0 1rem 0; /* Added margin-top to push the images down */
+  margin: 6rem 0 1rem 0; /* Added margin-top to push the images down */
 }
 
 .shop-card-images img {
