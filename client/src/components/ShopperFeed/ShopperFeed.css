@@ -157,7 +157,7 @@
   position: absolute; /* Position it at the bottom */
   padding-top: 10px;
   left: 1rem;
-  bottom: 0.5rem; /* Push it further down */
+  bottom: -1rem; /* Push it further down */
   right: 1rem;
   margin-top: auto; /* Ensure it's pushed to the bottom */
 }
