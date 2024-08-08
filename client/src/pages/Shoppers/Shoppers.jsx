@@ -41,6 +41,11 @@ const Shoppers = () => {
     <div className="shoppers-container">
       <div className="left-column">
         {/* Left column content can be added here */}
+        <div>Menu</div>
+        <div>Menu</div>
+        <div>Menu</div>
+        <div>Menu</div>
+        <div>Menu</div>
       </div>
       <div className="middle-column">
         <div className="search-bar-wrapper">
