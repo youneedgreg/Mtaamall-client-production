@@ -72,7 +72,7 @@ const ShopCard = ({ card }) => {
         </div>
         <div className="shop-card-info">
           <p className="shop-card-address">
-            {card.city} - {card.map}
+            {card.city} - {card.address}
           </p>
           <p className="shop-card-about">
             About <span className="shop-card-title">{card.title}</span>
