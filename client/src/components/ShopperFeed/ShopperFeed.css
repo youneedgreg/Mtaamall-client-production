@@ -13,6 +13,14 @@
   margin: 1rem 0;
   box-sizing: border-box;
 }
+.shop-card-heart {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: #E53E3E;
+  cursor: pointer;
+}
 
 .shop-card:hover {
   transform: translateY(-5px);
@@ -74,8 +82,10 @@
   height: 60%;
   border-radius: 1rem;
   overflow: hidden;
+  background-color: red;
   margin: 6rem 0 1rem 0; /* Added margin-top to push the images down */
 }
+
 
 .shop-card-images img {
   width: 50%;
