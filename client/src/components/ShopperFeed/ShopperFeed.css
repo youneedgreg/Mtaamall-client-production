@@ -1,6 +1,6 @@
 .shop-card {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
     border-radius: 10px;
     background-color: #fff;
@@ -14,13 +14,18 @@
     position: relative;
     width: 100px;
     height: 100px;
+    align-self: center;
+    max-height: 35rem;
+    border-radius: 1rem;
   }
   
   .shop-card-images img {
     width: 100px;
     height: 100px;
-    border-radius: 10px;
     object-fit: cover;
+    align-self: center;
+    max-height: 35rem;
+    border-radius: 1rem;
   }
   
   .shop-card-images .prev, .shop-card-images .next {
