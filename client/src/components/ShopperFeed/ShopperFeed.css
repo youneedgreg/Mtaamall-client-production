@@ -84,7 +84,6 @@
   overflow: hidden;
   background-color: red;
   margin: 4rem 0 1rem 0;
-  padding-bottom: 2rem;
 }
 
 .shop-card-images img {
@@ -154,11 +153,12 @@
   display: flex;
   justify-content: space-between; /* Space buttons evenly */
   position: absolute; /* Position it at the bottom */
-  bottom: 1rem;
+  bottom: 0.5rem; /* Push it further down */
   left: 1rem;
   right: 1rem;
   margin-top: auto; /* Ensure it's pushed to the bottom */
 }
+
 
 .shop-card-meta button {
   background-color: #ff5a5a;
