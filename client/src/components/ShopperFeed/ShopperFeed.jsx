@@ -63,6 +63,7 @@ const ShopCard = ({ card }) => {
       <div className="shop-card-details">
         <div className="shop-card-header">
           <h2>{truncate(card.title, { length: 15 })}</h2>
+          <p className="category">{truncate(card.category, { length: 90 })}</p>
           <div className="shop-card-meta">
             <Heart id={card?.id} />
             <button className="shop-card-social">Social media</button>
