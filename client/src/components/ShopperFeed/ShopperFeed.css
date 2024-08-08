@@ -36,7 +36,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: calc(100% - 2rem); /* Adjust width to accommodate header and bookmark */
+  width: 100%;
 }
 
 .shop-card-header .left-section {
@@ -66,19 +66,23 @@
 
 .shop-card-details {
   display: flex;
-  flex-direction: row; /* Adjust layout to have image and info side by side */
+  flex-direction: column;
+  align-items: flex-start;
   width: 100%;
-  height: calc(75vh - 5rem); /* Adjust height to leave space for footer */
   margin-top: 5rem;
 }
 
 .shop-card-images {
-  position: relative;
+  position: absolute;
   width: 50%;
-  height: 100%;
+  top: 50%; /* Center it vertically */
+  right: 1rem; /* Position it to the right */
+  transform: translateY(-50%);
+  height: 60%;
   border-radius: 1rem;
   overflow: hidden;
   background-color: red;
+  margin: 4rem 0 1rem 0; /* Adjusted for spacing */
 }
 
 .shop-card-images img {
@@ -86,6 +90,7 @@
   height: 100%;
   object-fit: cover;
   border-radius: 1rem;
+  background-color: red;
 }
 
 .shop-card-images .prev, .shop-card-images .next {
@@ -117,8 +122,11 @@
 }
 
 .shop-card-info {
-  width: 50%;
-  padding-left: 1rem; /* Add padding to separate from images */
+  position: absolute;
+  right: 52%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 45%;
 }
 
 .shop-card-info .shop-card-address {
@@ -145,7 +153,6 @@
   align-items: center;
   gap: 1rem;
   width: 100%;
-  margin-top: auto; /* Push meta buttons to the bottom */
 }
 
 .shop-card-meta button {
@@ -164,7 +171,7 @@
 }
 
 .shop-card-meta .shop-card-social {
-  background-color: #3b5998; /* Facebook blue */
+  background-color: #3b5998;
 }
 
 .shop-card-meta .shop-card-social:hover {
@@ -172,7 +179,7 @@
 }
 
 .shop-card-meta .shop-card-message {
-  background-color: #25D366; /* WhatsApp green */
+  background-color: #25D366;
 }
 
 .shop-card-meta .shop-card-message:hover {
@@ -180,7 +187,7 @@
 }
 
 .shop-card-meta .shop-card-call {
-  background-color: #ff5a5a; /* Red */
+  background-color: #ff5a5a;
 }
 
 .shop-card-meta .shop-card-call:hover {
