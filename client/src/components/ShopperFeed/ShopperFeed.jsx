@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import './ShopperFeed.css'; // Update this to match your CSS file name
+import './ShopperFeed.css';
 import { truncate } from 'lodash';
 import { useNavigate } from "react-router-dom";
 import Heart from "../Heart/Heart";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
+import { FaStore } from "react-icons/fa"; // Import Eatery icon
 
 const ShopCard = ({ card }) => {
   const { data, isError, isLoading } = useProperties();
@@ -62,6 +63,7 @@ const ShopCard = ({ card }) => {
       </div>
       <div className="shop-card-details">
         <div className="shop-card-header">
+          {card.category === "Eatery" && <FaStore size={20} />} {/* Display Eatery icon */}
           <h2>{truncate(card.title, { length: 15 })}</h2>
           <p className="category">{truncate(card.category, { length: 90 })}</p>
           <div className="shop-card-meta">
