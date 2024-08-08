@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './ShopperFeed.css';
+import './ShopperFeed.css'; // Update this to match your CSS file name
 import { truncate } from 'lodash';
 import { useNavigate } from "react-router-dom";
 import Heart from "../Heart/Heart";
@@ -61,15 +61,19 @@ const ShopCard = ({ card }) => {
         )}
       </div>
       <div className="shop-card-details">
-        <h2>{truncate(card.title, { length: 15 })}</h2>
-        <p className="shop-card-category">{truncate(card.category, { length: 90 })}</p>
-        <p>{truncate(card.city, { length: 90 })}, {truncate(card.country, { length: 90 })}</p>
-        <p>About <span>{truncate(card.sdescription, { length: 90 })}</span></p>
-        <div className="shop-card-meta">
-          <Heart id={card?.id} />
-          <button className="shop-card-social">Social media</button>
-          <button className="shop-card-message">Message</button>
-          <button className="shop-card-call">Call Us</button>
+        <div className="shop-card-header">
+          <h2>{truncate(card.title, { length: 15 })}</h2>
+          <div className="shop-card-meta">
+            <Heart id={card?.id} />
+            <button className="shop-card-social">Social media</button>
+            <button className="shop-card-message">Message</button>
+            <button className="shop-card-call">Call Us</button>
+          </div>
+        </div>
+        <div className="shop-card-info">
+          <p className="shop-card-category">{truncate(card.category, { length: 90 })}</p>
+          <p>{truncate(card.city, { length: 90 })}, {truncate(card.country, { length: 90 })}</p>
+          <p>About <span>{truncate(card.sdescription, { length: 90 })}</span></p>
         </div>
       </div>
     </div>
