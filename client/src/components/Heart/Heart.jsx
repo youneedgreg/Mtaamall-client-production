@@ -39,7 +39,7 @@ const Heart = ({id}) => {
         if(validateLogin())
         {
             mutate()
-            setHeartColor((prev)=> prev === "#fa3e5f" ? "white": "#fa3e5f")
+            setHeartColor((prev)=> prev === "#fa3e5f" ? "yellow": "#fa3e5f")
         }
     }
 
