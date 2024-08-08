@@ -24,10 +24,10 @@
   top: 1rem;
   left: 1rem;
   display: flex;
-  flex-direction: row; /* Changed from column to row */
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* To stretch across the whole card */
+  width: 100%;
 }
 
 .shop-card-header .left-section {
@@ -74,8 +74,7 @@
   height: 60%;
   border-radius: 1rem;
   overflow: hidden;
-  margin: 1rem 0;
-  background-color:red;
+  margin: 3rem 0 1rem 0; /* Added margin-top to push the images down */
 }
 
 .shop-card-images img {
