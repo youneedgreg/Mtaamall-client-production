@@ -21,21 +21,24 @@
   }
   
   .shop-card-header {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-bottom: 1rem;
+    align-items: flex-end;
   }
   
   .shop-card-header h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #E53E3E; /* Red color */
+    margin: 0;
   }
   
-  .shop-card-header p {
+  .shop-card-header .category {
     font-size: 1rem;
     color: #666;
+    margin: 0.25rem 0 0 0;
   }
   
   .shop-card-details {
@@ -43,6 +46,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    margin-top: 2rem;
   }
   
   .shop-card-details p {
@@ -52,20 +56,18 @@
   
   .shop-card-images {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: 60%;
     border-radius: 1rem;
     overflow: hidden;
     margin: 1rem 0;
-    background-color: red;
   }
   
   .shop-card-images img {
-    width: 50%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
-    background-color: red;
   }
   
   .shop-card-images .prev, .shop-card-images .next {
