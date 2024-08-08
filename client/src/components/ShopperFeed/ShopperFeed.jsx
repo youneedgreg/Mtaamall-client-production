@@ -70,6 +70,15 @@ const ShopCard = ({ card }) => {
             </>
           )}
         </div>
+        <div className="shop-card-info">
+          <p className="shop-card-address">
+            {card.city} - {card.map}
+          </p>
+          <p className="shop-card-about">
+            About <span className="shop-card-title">{card.title}</span>
+          </p>
+          <p className="shop-card-description">{truncate(card.sdescription, { length: 150 })}</p>
+        </div>
         <div className="shop-card-meta">
           <button className="shop-card-social">Social media</button>
           <button className="shop-card-message">Message</button>

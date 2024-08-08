@@ -13,6 +13,7 @@
   margin: 1rem 0;
   box-sizing: border-box;
 }
+
 .shop-card-heart {
   position: absolute;
   top: 1rem;
@@ -68,12 +69,7 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  margin-top: 5rem; /* Adjusted to give space below the header */
-}
-
-.shop-card-details p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
+  margin-top: 5rem;
 }
 
 .shop-card-images {
@@ -81,14 +77,13 @@
   width: 50%;
   top: 50%; /* Center it vertically */
   right: 1rem; /* Position it to the right */
-  transform: translateY(-50%); /* Adjust for perfect centering */
+  transform: translateY(-50%);
   height: 60%;
   border-radius: 1rem;
   overflow: hidden;
   background-color: red;
-  margin: 4rem 0 1rem 0; /* Added margin-top to push the images down */
+  margin: 4rem 0 1rem 0; /* Adjusted for spacing */
 }
-
 
 .shop-card-images img {
   width: 100%;
@@ -126,6 +121,33 @@
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.shop-card-info {
+  position: absolute;
+  right: 52%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 45%;
+}
+
+.shop-card-info .shop-card-address {
+  font-weight: bold;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+.shop-card-info .shop-card-about {
+  margin-bottom: 0.5rem;
+}
+
+.shop-card-info .shop-card-title {
+  color: #E53E3E;
+  text-decoration: underline;
+}
+
+.shop-card-info .shop-card-description {
+  color: #666;
+}
+
 .shop-card-meta {
   display: flex;
   align-items: center;
@@ -149,7 +171,7 @@
 }
 
 .shop-card-meta .shop-card-social {
-  background-color: #3b5998; /* Facebook blue */
+  background-color: #3b5998;
 }
 
 .shop-card-meta .shop-card-social:hover {
@@ -157,7 +179,7 @@
 }
 
 .shop-card-meta .shop-card-message {
-  background-color: #25D366; /* WhatsApp green */
+  background-color: #25D366;
 }
 
 .shop-card-meta .shop-card-message:hover {
@@ -165,7 +187,7 @@
 }
 
 .shop-card-meta .shop-card-call {
-  background-color: #ff5a5a; /* Red */
+  background-color: #ff5a5a;
 }
 
 .shop-card-meta .shop-card-call:hover {
