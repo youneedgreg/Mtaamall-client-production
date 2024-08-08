@@ -1,45 +1,49 @@
 .shop-card {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 300ms ease-in;
-    cursor: pointer;
-    position: relative;
-    align-items: center;
-    width: 100%;
-    height: 75vh;
-    margin: 1rem 0;
-    box-sizing: border-box;
-  }
-  
-  .shop-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .shop-card-header {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  
-  .shop-card-header h2 {
-    font-size: 1.5rem;
-    color: #E53E3E; /* Red color */
-    margin: 0;
-  }
-  
-  .shop-card-header p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 300ms ease-in;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  width: 100%;
+  height: 75vh;
+  margin: 1rem 0;
+  box-sizing: border-box;
+}
+
+.shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.shop-card-header {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+}
+
+.shop-card-header h2 {
+  font-size: 1.5rem;
+  color: #E53E3E; /* Red color */
+  margin: 0;
+}
+
+.shop-card-header p {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.2rem 0 0 0;
+}
+
+/* Rest of your CSS remains the same */
+
   .shop-card-details {
     display: flex;
     flex-direction: column;
