@@ -8,7 +8,6 @@
   transition: all 300ms ease-in;
   cursor: pointer;
   position: relative;
-  align-items: center;
   width: 100%;
   height: 75vh;
   margin: 1rem 0;
@@ -23,15 +22,23 @@
 .shop-card-header {
   position: absolute;
   top: 1rem;
-  left: 1rem; /* Changed from right: 1rem to left: 1rem */
+  left: 1rem;
+  display: flex;
+  flex-direction: row; /* Changed from column to row */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* To stretch across the whole card */
+}
+
+.shop-card-header .left-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Changed from align-items: flex-end */
+  align-items: flex-start;
 }
 
 .shop-card-header h2 {
   font-size: 1.5rem;
-  color: #E53E3E; /* Red color */
+  color: #E53E3E;
   margin: 0;
 }
 
@@ -41,12 +48,19 @@
   margin: 0.25rem 0 0 0;
 }
 
+.shop-card-header .bookmark {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: #E53E3E;
+  cursor: pointer;
+}
+
 .shop-card-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 5rem; /* Adjusted to give space below the header */
 }
 
 .shop-card-details p {
