@@ -52,6 +52,7 @@ const ShopCard = ({ card }) => {
           <h2>{truncate(card.title, { length: 15 })}</h2>
           <p className="category">{truncate(card.category, { length: 90 })}</p>
         </div>
+        <Heart id={card?.id} />
         <div className="bookmark">
           <Heart id={card?.id} />
         </div>
