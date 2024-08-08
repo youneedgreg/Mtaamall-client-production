@@ -84,7 +84,6 @@
   height: 60%;
   border-radius: 1rem;
   overflow: hidden;
-  background-color: red;
   margin: 4rem 0 1rem 0;
 }
 
@@ -135,6 +134,7 @@
   font-weight: bold;
   color: black;
   margin-bottom: 1rem;
+  padding-bottom: -10px;
 }
 
 .shop-card-info .shop-card-about {
@@ -155,7 +155,7 @@
   display: flex;
   justify-content: space-between; /* Space buttons evenly */
   position: absolute; /* Position it at the bottom */
-  bottom: 0.5rem; /* Push it further down */
+  padding-top: 10px;
   left: 1rem;
   right: 1rem;
   margin-top: auto; /* Ensure it's pushed to the bottom */
