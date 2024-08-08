@@ -23,10 +23,10 @@
 .shop-card-header {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem; /* Changed from right: 1rem to left: 1rem */
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start; /* Changed from align-items: flex-end */
 }
 
 .shop-card-header h2 {
