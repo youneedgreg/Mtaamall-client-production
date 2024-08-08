@@ -12,6 +12,10 @@
   flex: 1;
 }
 
+.left-column .one{
+  border-width: 1px;
+}
+
 .middle-column {
   flex: 3;
   padding: 20px;
