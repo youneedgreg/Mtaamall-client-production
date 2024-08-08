@@ -9,18 +9,49 @@
     cursor: pointer;
     position: relative;
     align-items: center;
-    width: 100%; /* Make the card take up 100% of the page width */
-    height: 75vh; /* Make the card take up 3/4 of the viewport height */
-    margin: 1rem 0; /* Vertical margin */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    width: 100%;
+    height: 75vh;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  .shop-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .shop-card-header h2 {
+    font-size: 2rem;
+    color: #E53E3E; /* Red color */
+  }
+  
+  .shop-card-header p {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .shop-card-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .shop-card-details p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
   }
   
   .shop-card-images {
     position: relative;
     width: 100%;
-    height: 60%; /* Make the image container take up 60% of the card's height */
+    height: 60%;
     border-radius: 1rem;
     overflow: hidden;
+    margin: 1rem 0;
   }
   
   .shop-card-images img {
@@ -33,17 +64,17 @@
   .shop-card-images .prev, .shop-card-images .next {
     position: absolute;
     top: 50%;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
     padding: 2px;
     color: white;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 20px;
     transition: 0.6s ease;
     border-radius: 50%;
     user-select: none;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   
   .shop-card-images .prev {
@@ -55,82 +86,52 @@
   }
   
   .shop-card-images .prev:hover, .shop-card-images .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-  
-  .shop-card-details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-top: 1rem;
-    width: 100%;
-    height: 40%; /* Make the details container take up 40% of the card's height */
-  }
-  
-  .shop-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .shop-card-details h2 {
-    font-size: 1.5rem; /* Increase the font size */
-    font-weight: bold;
-    margin: 0;
-  }
-  
-  .shop-card-info {
-    margin-top: 1rem;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-  
-  .shop-card-info p {
-    margin: 0.5rem 0;
-  }
-  
-  .shop-card-category {
-    color: #666;
-    font-size: 1rem; /* Adjust the font size */
+    background-color: rgba(0, 0, 0, 0.8);
   }
   
   .shop-card-meta {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
+    width: 100%;
   }
   
   .shop-card-meta button {
-    background-color: #f5f5f5;
+    background-color: #ff5a5a;
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 200ms ease-in;
-    font-size: 0.8rem;
+    font-size: 1rem;
+    color: #fff;
   }
   
   .shop-card-meta button:hover {
-    background-color: #e0e0e0;
+    background-color: #ff3333;
   }
   
   .shop-card-meta .shop-card-social {
-    color: green;
+    background-color: #3b5998; /* Facebook blue */
+  }
+  
+  .shop-card-meta .shop-card-social:hover {
+    background-color: #2d4373;
   }
   
   .shop-card-meta .shop-card-message {
-    color: red;
+    background-color: #25D366; /* WhatsApp green */
+  }
+  
+  .shop-card-meta .shop-card-message:hover {
+    background-color: #128C7E;
   }
   
   .shop-card-meta .shop-card-call {
-    color: blue;
+    background-color: #ff5a5a; /* Red */
   }
   
-  .shop-card:hover {
-    transform: scale(1.025);
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  .shop-card-meta .shop-card-call:hover {
+    background-color: #ff3333;
   }
   

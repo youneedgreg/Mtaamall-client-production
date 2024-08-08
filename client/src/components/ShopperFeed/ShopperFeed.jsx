@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './ShopperFeed.css'; // Update this to match your CSS file name
+import './ShopperFeed.css';
 import { truncate } from 'lodash';
 import { useNavigate } from "react-router-dom";
 import Heart from "../Heart/Heart";
@@ -47,33 +47,31 @@ const ShopCard = ({ card }) => {
 
   return (
     <div className="shop-card" onClick={() => navigate(`../properties/${card.id}`)}>
-      <div className="shop-card-images">
-        {card.images && card.images.length > 0 && (
-          <>
-            <img src={card.images[currentImageIndex]} alt="property" />
-            {card.images.length > 1 && (
-              <>
-                <button className="prev" onClick={handlePrevImage}>&#10094;</button>
-                <button className="next" onClick={handleNextImage}>&#10095;</button>
-              </>
-            )}
-          </>
-        )}
+      <div className="shop-card-header">
+        <h2>{card.title}</h2>
+        <p>{card.category}</p>
       </div>
       <div className="shop-card-details">
-        <div className="shop-card-header">
-          <h2>{truncate(card.title, { length: 15 })}</h2>
-          <div className="shop-card-meta">
-            <Heart id={card?.id} />
-            <button className="shop-card-social">Social media</button>
-            <button className="shop-card-message">Message</button>
-            <button className="shop-card-call">Call Us</button>
-          </div>
+        <p>{truncate(card.city, { length: 50 })}, {truncate(card.country, { length: 50 })}</p>
+        <p>About <span>{truncate(card.sdescription, { length: 50 })}</span></p>
+        <div className="shop-card-images">
+          {card.images && card.images.length > 0 && (
+            <>
+              <img src={card.images[currentImageIndex]} alt="property" />
+              {card.images.length > 1 && (
+                <>
+                  <button className="prev" onClick={handlePrevImage}>&#10094;</button>
+                  <button className="next" onClick={handleNextImage}>&#10095;</button>
+                </>
+              )}
+            </>
+          )}
         </div>
-        <div className="shop-card-info">
-          <p className="shop-card-category">{truncate(card.category, { length: 90 })}</p>
-          <p>{truncate(card.city, { length: 90 })}, {truncate(card.country, { length: 90 })}</p>
-          <p>About <span>{truncate(card.sdescription, { length: 90 })}</span></p>
+        <div className="shop-card-meta">
+          <Heart id={card?.id} />
+          <button className="shop-card-social">Social media</button>
+          <button className="shop-card-message">Message</button>
+          <button className="shop-card-call">Call Us</button>
         </div>
       </div>
     </div>
