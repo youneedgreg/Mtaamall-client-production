@@ -84,6 +84,7 @@
   overflow: hidden;
   background-color: red;
   margin: 4rem 0 1rem 0;
+  padding-bottom: 2rem;
 }
 
 .shop-card-images img {
@@ -137,6 +138,7 @@
 
 .shop-card-info .shop-card-about {
   margin-bottom: 0.5rem;
+  color: red;
 }
 
 .shop-card-info .shop-card-title {
