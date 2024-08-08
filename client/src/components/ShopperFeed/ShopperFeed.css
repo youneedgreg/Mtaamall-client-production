@@ -70,19 +70,20 @@
   align-items: flex-start;
   width: 100%;
   margin-top: 5rem;
+  padding-bottom: 4rem; /* Add padding to ensure space for buttons */
 }
 
 .shop-card-images {
   position: absolute;
   width: 50%;
-  top: 50%; /* Center it vertically */
-  right: 1rem; /* Position it to the right */
+  top: 50%;
+  right: 1rem;
   transform: translateY(-50%);
   height: 60%;
   border-radius: 1rem;
   overflow: hidden;
   background-color: red;
-  margin: 4rem 0 1rem 0; /* Adjusted for spacing */
+  margin: 4rem 0 1rem 0;
 }
 
 .shop-card-images img {
@@ -90,7 +91,6 @@
   height: 100%;
   object-fit: cover;
   border-radius: 1rem;
-  background-color: red;
 }
 
 .shop-card-images .prev, .shop-card-images .next {
@@ -150,10 +150,12 @@
 
 .shop-card-meta {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  width: 100%;
+  justify-content: space-between; /* Space buttons evenly */
+  position: absolute; /* Position it at the bottom */
   bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  margin-top: auto; /* Ensure it's pushed to the bottom */
 }
 
 .shop-card-meta button {
