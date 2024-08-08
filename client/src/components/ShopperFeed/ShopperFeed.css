@@ -52,7 +52,7 @@
   
   .shop-card-images {
     position: relative;
-    width: 100%;
+    width: 50%;
     height: 60%;
     border-radius: 1rem;
     overflow: hidden;
@@ -60,7 +60,7 @@
   }
   
   .shop-card-images img {
-    width: 100%;
+    width: 50%;
     height: 100%;
     object-fit: cover;
     border-radius: 1rem;
