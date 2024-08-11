@@ -7,8 +7,8 @@ import OutsideClickHandler from "react-outside-click-handler";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
-import AddPropertyModal from "../AddPropertyModal/AddPropertyModal";
 import useAuthCheck from "../../hooks/useAuthCheck.jsx";
+import SearchBar from "../SearchBar/SearchBar.jsx";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -30,6 +30,7 @@ const Header = () => {
         <Link to="/">
           <h1>MtaaMall</h1>
         </Link>
+        <SearchBar/>
 
         {/* menu */}
         <OutsideClickHandler
