@@ -42,7 +42,7 @@ const Shoppers = () => {
       <div className="left-column">
         {/* Left column content can be added here */}
         <div className='one'>Menu</div>
-        <div className='one'>Menu</div>
+        <div className='one'>Menu1</div>
         <div className='one'>Menu</div>
         <div className='one'>Menu</div>
         <div className='one'>Menu</div>
