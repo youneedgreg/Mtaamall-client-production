@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
 import useHeaderColor from "../../hooks/useHeaderColor";
@@ -9,23 +9,49 @@ import ProfileMenu from "../ProfileMenu/ProfileMenu";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 
 const Header = ({ filter, setFilter }) => {
+  const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
   const location = useLocation();
+  const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+
   const showSearchBar = ["/properties", "/bookings", "/favourites", "/shoppers"].includes(location.pathname);
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
       <div className="flexCenter innerWidth paddings h-container">
-        <Link to="/">MtaaMall</Link>
+        <Link to="/">
+          <h1>MtaaMall</h1>
+        </Link>
+
         {showSearchBar && <SearchBar filter={filter} setFilter={setFilter} />}
-        <OutsideClickHandler>
-          <div className="flexCenter h-menu">
-            <a href="https://business-mtaamall.vercel.app">Business</a>
+
+        <OutsideClickHandler
+          onOutsideClick={() => {
+            setMenuOpened(false);
+          }}
+        >
+          <div
+            className="flexCenter h-menu"
+            style={{ display: menuOpened ? "flex" : "none" }}
+          >
+            {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
+
             <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
-            {/* Login/Profile Menu */}
+
+            {!isAuthenticated ? (
+              <button className="button" onClick={loginWithRedirect}>
+                Login
+              </button>
+            ) : (
+              <ProfileMenu user={user} logout={logout} />
+            )}
           </div>
         </OutsideClickHandler>
-        <div className="menu-icon">
+
+        <div
+          className="menu-icon"
+          onClick={() => setMenuOpened((prev) => !prev)}
+        >
           <BiMenuAltRight size={30} />
         </div>
       </div>

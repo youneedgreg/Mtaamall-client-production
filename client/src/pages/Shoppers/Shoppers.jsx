@@ -3,6 +3,7 @@ import './Shoppers.css';
 import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
 import SearchBar from '../../components/SearchBar/SearchBar';
 import ShopperFeed from '../../components/ShopperFeed/ShopperFeed';
+import Header from '../../components/Header/Header';
 import { getAllProperties } from '../../utils/api';
 
 const categories = [
@@ -14,7 +15,7 @@ const categories = [
 ];
 
 const Shoppers = () => {
-  const [filter, setFilter] = React.useState("");
+  const [filter, setFilter] = useState("");
   const [shops, setShops] = useState([]);
   const [filteredShops, setFilteredShops] = useState([]);
 
@@ -39,8 +40,8 @@ const Shoppers = () => {
 
   return (
     <div className="shoppers-container">
+      <Header filter={filter} setFilter={setFilter} /> {/* Pass filter and setFilter to Header */}
       <div className="left-column">
-        {/* Left column content can be added here */}
         <div className='one'>Menu</div>
         <div className='one'>Menu1</div>
         <div className='one'>Menu</div>
@@ -66,7 +67,6 @@ const Shoppers = () => {
         </div>
       </div>
       <div className="right-column">
-        {/* Right column content can be added here */}
         <div className="icons">
           <div className="icon">Icon 1</div>
           <div className="icon">Icon 2</div>
