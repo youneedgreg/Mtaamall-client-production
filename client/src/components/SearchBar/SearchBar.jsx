@@ -19,7 +19,6 @@ const SearchBar = ({ filter, setFilter }) => {
           flex: 1,
         }}
       />
-      <button className="button" style={{ borderRadius: '25px', marginLeft: '10px' }}>Search</button>
     </div>
   );
 };
