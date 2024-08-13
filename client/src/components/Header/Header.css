@@ -14,14 +14,12 @@
 }
 
 .search-bar {
+  width: fit-content;
+  max-width: 50%;
   margin-left: auto; /* Pushes the search bar to the right */
   margin-right: auto; /* Centers the search bar */
   border-radius: 25px; /* Rounded corners */
   background-color: grey;
-  width: clamp(12rem, 100%, 28rem);
-  border-radius: 30px;
-  border: 1px solid rgba(120, 120, 120, 0.374);
-  flex-wrap: nowrap;
 }
 .search-bar input{
   width: 70%;
