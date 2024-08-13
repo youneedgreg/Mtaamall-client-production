@@ -9,7 +9,7 @@ const Hero1 = () => {
   const [filter, setFilter] = React.useState("");
 
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper" style={{borderWidth:"5px" borderStyle: "inset", borderColor: "gray",}}>
       <div className="paddings innerWidth flexCenter hero-container">
         {/* Header */}
         <div className="flexCenter header">

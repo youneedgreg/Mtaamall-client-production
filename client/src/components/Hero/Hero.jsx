@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="hero-wrapper">
+    <section className="hero-wrapper" style={{ borderWidth:"5px" borderStyle: "inset", borderColor: "gray",}}>
       <div className="paddings innerWidth flexCenter hero-container">
         {/* left side */}
         <div className="flexColStart hero-left">
