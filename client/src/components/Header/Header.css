@@ -18,6 +18,8 @@
   max-width: 50%;
   margin-left: auto; /* Pushes the search bar to the right */
   margin-right: auto; /* Centers the search bar */
+  border-radius: 25px; /* Rounded corners */
+  background-color: grey;
 }
 
 .h-menu {
