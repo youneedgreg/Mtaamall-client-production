@@ -31,7 +31,7 @@ const Header = () => {
         <Link to="/">
           <h1>MtaaMall</h1>
         </Link>
-        <SearchBar className="search-bar" style="background-color: lightgrey;border-radius: 25px;" filter={filter} setFilter={setFilter} />
+        <SearchBar filter={filter} setFilter={setFilter} />
 
         {/* menu */}
         <OutsideClickHandler
@@ -39,15 +39,9 @@ const Header = () => {
             setMenuOpened(false);
           }}
         >
-          <div
-            className="flexCenter h-menu"
-            style={getMenuStyles(menuOpened)}
-          >
+          <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
             {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
-
             <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
-
-
             {/* login button */}
             {!isAuthenticated ? (
               <button className="button" onClick={loginWithRedirect}>
