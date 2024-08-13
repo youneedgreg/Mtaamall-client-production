@@ -1,19 +1,22 @@
 import React from "react";
 import { FaSearchLocation } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 const SearchBar = ({ filter, setFilter }) => {
+  const navigate = useNavigate(); // Initialize navigate
+
+  const handleSearchClick = () => {
+    // Navigate to /properties when the search bar is clicked
+    navigate("/properties");
+  };
+
   return (
     <div
       className="flexCenter search-bar"
-      style={{
-        background: 'red',
-        backgroundColor: 'lightgrey',
-        borderRadius: '25px',
-        padding: '10px',
-        border: '2px solid red', // Added red border
-      }}
+      style={{ backgroundColor: 'lightgrey', borderRadius: '25px', padding: '10px' }}
+      onClick={handleSearchClick} // Add click handler
     >
-      <FaSearchLocation color="gray" size={25} />
+      <FaSearchLocation color="red" size={25} />
       <input
         placeholder="Search for shop, Brand categories..."
         type="text"
