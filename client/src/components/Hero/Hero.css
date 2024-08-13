@@ -1,31 +1,32 @@
 .hero-wrapper {
-  color: rgb(255, 255, 255);
+  color: black; /* Changed the text color to black for better readability on a white background */
   position: relative;
   z-index: 1;
   padding-bottom: 2rem;
-  background-color: white;
+  background-color: white; /* Set the background color to white */
 }
-
 
 .hero-container {
   justify-content: space-around;
-  align-items: flex-end; 
+  align-items: flex-end;
 }
-
 
 /* left side */
 .hero-left {
   gap: 3rem;
 }
+
 .hero-title {
   position: relative;
   z-index: 1;
 }
+
 .hero-title > h1 {
   font-weight: 600;
   font-size: 3.8rem;
   line-height: 4rem;
 }
+
 .orange-circle {
   height: 4rem;
   width: 4rem;
@@ -36,6 +37,7 @@
   top: -10%;
   z-index: -1;
 }
+
 .search-bar {
   background-color: white;
   border-radius: 5px;
@@ -44,24 +46,29 @@
   width: 100%;
   justify-content: space-between;
 }
+
 .search-bar > input {
   border: none;
   outline: none;
 }
-.stats{
-    width: 100%;
-    justify-content: space-between;
+
+.stats {
+  width: 100%;
+  justify-content: space-between;
 }
-.secondaryText{
-  color:black;
+
+.secondaryText {
+  color: black; /* Ensure secondary text is readable on a white background */
 }
-.stat>:nth-child(1)
-{
-    font-size: 2rem;
+
+.stat > :nth-child(1) {
+  font-size: 2rem;
 }
-.stat>:nth-child(1)>:last-child{
-    color: black;
+
+.stat > :nth-child(1) > :last-child {
+  color: black;
 }
+
 .find-stores-button {
   background-color: red;
   color: white;
@@ -85,7 +92,6 @@
 }
 
 /* right side */
-
 .image-container {
   width: 30rem;
   height: 35rem;
@@ -93,34 +99,39 @@
   border-radius: 15rem 15rem 0 0;
   border: 8px solid rgba(255, 255, 255, 0.12);
 }
-.image-container>img{
-    width: 100%;
-    height: 100%;
+
+.image-container > img {
+  width: 100%;
+  height: 100%;
 }
 
 /* mobile screens */
-@media  (max-width: 640px){
-  .hero-container{
+@media (max-width: 640px) {
+  .hero-container {
     margin-top: 2rem;
   }
-  .hero-title>h1{
+
+  .hero-title > h1 {
     font-size: 2.5rem;
     line-height: 3rem;
   }
-  .image-container{
+
+  .image-container {
     width: 95%;
     height: 25rem;
   }
-  .stats{
+
+  .stats {
     justify-content: center;
     gap: 1.5rem;
     font-weight: wrap;
   }
-  .stat>:nth-child(1){
+
+  .stat > :nth-child(1) {
     font-size: 1.5rem;
   }
-  .stat>:nth-child(2)
-  {
+
+  .stat > :nth-child(2) {
     font-size: 0.8rem;
   }
 }
