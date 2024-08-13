@@ -1,10 +1,10 @@
 import React from "react";
-import { HiLocationMarker } from "react-icons/hi";
+import { FaSearchLocation } from "react-icons/fa";
 
 const SearchBar = ({ filter, setFilter }) => {
   return (
-    <div className="flexCenter search-bar" style={{ backgroundColor: 'lightgrey', borderRadius: '25px', padding: '10px' }}>
-      <HiLocationMarker color="var(--blue)" size={25} />
+    <div className="flexCenter search-bar" style={{ background: 'red', outlineColor: 'red', backgroundColor: 'lightgrey', borderRadius: '25px', padding: '10px' }}>
+      <FaSearchLocation color="var(--blue)" size={25} />
       <input
         placeholder="Search for shop, Brand categories..."
         type="text"
