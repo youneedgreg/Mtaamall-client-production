@@ -12,6 +12,7 @@ const SearchBar = ({ filter, setFilter }) => {
         onChange={(e) => setFilter(e.target.value)}
         style={{
           border: 'none',
+          backgroundColor: 'grey',
           outline: 'none',
           borderRadius: '25px',
           padding: '8px 12px',
