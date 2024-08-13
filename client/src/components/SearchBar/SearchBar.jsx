@@ -1,13 +1,16 @@
 import React from "react";
 import { FaSearchLocation } from "react-icons/fa";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate, useLocation } from "react-router-dom"; // Import useNavigate and useLocation
 
 const SearchBar = ({ filter, setFilter }) => {
   const navigate = useNavigate(); // Initialize navigate
+  const location = useLocation(); // Get current location
 
   const handleSearchClick = () => {
-    // Navigate to /properties when the search bar is clicked
-    navigate("/properties");
+    // Check if the current page is the home page before navigating
+    if (location.pathname === "/") {
+      navigate("/properties");
+    }
   };
 
   return (
