@@ -30,7 +30,7 @@ const Header = () => {
         <Link to="/">
           <h1>MtaaMall</h1>
         </Link>
-       
+        <SearchBar/>
 
         {/* menu */}
         <OutsideClickHandler

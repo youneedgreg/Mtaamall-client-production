@@ -15,7 +15,7 @@
 
 .search-bar {
   width: fit-content;
-  max-width: 100%;
+  max-width: 50%;
   margin-left: auto; /* Pushes the search bar to the right */
   margin-right: auto; /* Centers the search bar */
 }
