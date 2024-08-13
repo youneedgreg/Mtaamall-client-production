@@ -16,6 +16,7 @@ const Header = () => {
   const [modalOpened, setModalOpened] = useState(false);
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
   const { validateLogin } = useAuthCheck();
+  const [filter, setFilter] = useState("");
 
   const handleAddPropertyClick = () => {
     if (validateLogin()) {
@@ -30,7 +31,7 @@ const Header = () => {
         <Link to="/">
           <h1>MtaaMall</h1>
         </Link>
-        <SearchBar/>
+        <SearchBar filter={filter} setFilter={setFilter} />
 
         {/* menu */}
         <OutsideClickHandler
