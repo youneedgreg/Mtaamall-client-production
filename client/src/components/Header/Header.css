@@ -21,6 +21,9 @@
   border-radius: 25px; /* Rounded corners */
   background-color: grey;
 }
+.h1{
+  color: #f6052d;
+}
 .search-bar input{
   width: 70%;
 }
