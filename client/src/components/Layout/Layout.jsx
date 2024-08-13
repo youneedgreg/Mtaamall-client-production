@@ -64,7 +64,7 @@ const Layout = ( filter, setFilter) => {
   return (
     <>
       <div style={{ background: "var(--black)", overflow: "hidden" }}>
-        <Header filter={filter} setFilter={setFilter}/>
+        <Header/>
         <Outlet />
       </div>
       <Footer />
