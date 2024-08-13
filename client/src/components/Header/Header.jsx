@@ -1,30 +1,39 @@
 import React, { useState } from "react";
 import "./Header.css";
 import { BiMenuAltRight } from "react-icons/bi";
+import { getMenuStyles } from "../../utils/common";
 import useHeaderColor from "../../hooks/useHeaderColor";
 import OutsideClickHandler from "react-outside-click-handler";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import ProfileMenu from "../ProfileMenu/ProfileMenu";
+import useAuthCheck from "../../hooks/useAuthCheck.jsx";
 import SearchBar from "../SearchBar/SearchBar.jsx";
 
-const Header = ({ filter, setFilter }) => {
+const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
   const headerColor = useHeaderColor();
-  const location = useLocation();
+  const [modalOpened, setModalOpened] = useState(false);
   const { loginWithRedirect, isAuthenticated, user, logout } = useAuth0();
+  const { validateLogin } = useAuthCheck();
+  const [filter, setFilter] = useState("");
 
-  const showSearchBar = ["/properties", "/bookings", "/favourites", "/shoppers"].includes(location.pathname);
+  const handleAddPropertyClick = () => {
+    if (validateLogin()) {
+      setModalOpened(true);
+    }
+  };
 
   return (
     <section className="h-wrapper" style={{ background: headerColor }}>
       <div className="flexCenter innerWidth paddings h-container">
+        {/* logo */}
         <Link to="/">
           <h1>MtaaMall</h1>
         </Link>
+        <SearchBar filter={filter} setFilter={setFilter} />
 
-        {showSearchBar && <SearchBar filter={filter} setFilter={setFilter} />}
-
+        {/* menu */}
         <OutsideClickHandler
           onOutsideClick={() => {
             setMenuOpened(false);
@@ -32,12 +41,14 @@ const Header = ({ filter, setFilter }) => {
         >
           <div
             className="flexCenter h-menu"
-            style={{ display: menuOpened ? "flex" : "none" }}
+            style={getMenuStyles(menuOpened)}
           >
             {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
 
             <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
 
+
+            {/* login button */}
             {!isAuthenticated ? (
               <button className="button" onClick={loginWithRedirect}>
                 Login
@@ -48,6 +59,7 @@ const Header = ({ filter, setFilter }) => {
           </div>
         </OutsideClickHandler>
 
+        {/* for medium and small screens */}
         <div
           className="menu-icon"
           onClick={() => setMenuOpened((prev) => !prev)}
