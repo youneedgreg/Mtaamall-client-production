@@ -26,7 +26,6 @@ const SearchBar = ({ filter, setFilter }) => {
           borderRadius: '25px',
           padding: '8px 12px',
           flex: 1,
-          border: '2px solid red', // Added red border to the input
         }}
       />
     </div>
