@@ -31,7 +31,7 @@ const Header = () => {
         <Link to="/">
           <h1>MtaaMall</h1>
         </Link>
-        <SearchBar className="search-bar" filter={filter} setFilter={setFilter} />
+        <SearchBar className="search-bar" style="background-color: grey;border-radius: 25px;" filter={filter} setFilter={setFilter} />
 
         {/* menu */}
         <OutsideClickHandler
