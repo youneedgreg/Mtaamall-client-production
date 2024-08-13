@@ -1,9 +1,9 @@
 .hero-wrapper {
-  color: rgb(255, 255, 255);
+  color: black;
   position: relative;
   z-index: 1;
   padding-bottom: 2rem;
-  background-color: rgb(220, 161, 161);
+  background-color: white;
 }
 
 .hero-container {
