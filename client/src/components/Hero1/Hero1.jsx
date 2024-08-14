@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Hero1 = () => {
 
   return (
-    <section className="hero-wrapper" style={{borderWidth:"5px", borderStyle: "inset", borderColor: "gray",}}>
+    <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
         {/* Header */}
         <div className="flexCenter header">
