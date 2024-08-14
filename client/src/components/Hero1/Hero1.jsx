@@ -9,9 +9,6 @@ const Hero1 = () => {
   return (
     <section className="hero-wrapper">
       <div className="paddings innerWidth flexCenter hero-container">
-        {/* Header */}
-        <div className="flexCenter header">
-        </div>
 
         {/* Categories */}
         <div className="flexCenter categories">

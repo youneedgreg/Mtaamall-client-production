@@ -25,10 +25,9 @@ const Header = () => {
   };
 
   return (
-    <section className="h-wrapper" style={{ background: headerColor, borderBottomStyle: "outset",
+    <section className="h-wrapper" style={{ background: headerColor,
       borderBottomWidth: "5px",
-      borderBottomColor: "#ccc",
-      boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.1)", }}>
+      boxShadow: "10px 10px 5px darkgray", }}>
       <div className="flexCenter innerWidth paddings h-container">
         {/* logo */}
         <Link to="/">
