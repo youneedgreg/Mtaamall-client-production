@@ -3,19 +3,14 @@ import "./Hero1.css";
 import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import SearchBar from "../SearchBar/SearchBar";
 
 const Hero1 = () => {
-  const [filter, setFilter] = React.useState("");
 
   return (
     <section className="hero-wrapper" style={{borderWidth:"5px", borderStyle: "inset", borderColor: "gray",}}>
       <div className="paddings innerWidth flexCenter hero-container">
         {/* Header */}
         <div className="flexCenter header">
-          <div className="search-bar-wrapper">
-            <SearchBar filter={filter} setFilter={setFilter} />
-          </div>
         </div>
 
         {/* Categories */}
