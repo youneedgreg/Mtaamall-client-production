@@ -12,25 +12,23 @@
 }
 
 /* Header */
-
 .search-bar-wrapper {
   width: 100%;
   display: flex;
   justify-content: center; /* Centering the search bar */
 }
 
-
 /* Categories */
 .categories {
   display: flex;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-around; /* Adjust the spacing between categories */
   width: 80%;
-  padding-top: 5px;
+  padding: 10px 15px; /* Add padding inside the container */
   background-color: white;
   border-radius: 15px;
   border: 2px solid red;
-  height: 90px;
+  height: auto; /* Allow height to adjust based on content */
 }
 
 .category {
@@ -41,18 +39,21 @@
 
 /* Style for the icons */
 .category svg {
+  width: 35px; /* Set the icon width */
+  height: 35px; /* Set the icon height */
   border: 2px solid black; /* Set the border thickness and color */
   border-radius: 50%; /* Make the border circular */
-  padding: 10px; /* Adjust padding to control the space inside the circle */
-  box-sizing: content-box; /* Ensure padding doesn't affect the icon size */
+  padding: 5px; /* Adjust padding to control the space inside the circle */
+  box-sizing: border-box; /* Ensure padding doesn't affect the icon size */
 }
 
 /* Text styling remains the same */
 .category span {
-  margin-top: 0.1rem;
+  margin-top: 0.5rem; /* Increase margin for better spacing */
   font-size: 1rem;
   color: black;
 }
+
 /* Welcome text */
 .welcome-text {
   text-align: center;
@@ -93,42 +94,3 @@
   object-fit: cover;
   border-radius: 10px;
 }
-
-.banner span {
-  margin-top: 1rem; /* Increased margin-top */
-  font-size: 1.5rem; /* Increased font size */
-  color: black;
-}
-
-.banner a {
-  text-decoration: none;
-}
-
-/* Mobile screens */
-@media (max-width: 640px) {
-  .hero-container {
-    padding: 1rem;
-  }
-  .categories {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  .banners {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-
-.hero-container .search-bar {
-  width: clamp(12rem, 100%, 28rem);
-  border-radius: 30px;
-  border: 1px solid rgba(120, 120, 120, 0.374);
-  flex-wrap: nowrap;
-}
-
-.hero-container .search-bar .button {
-  border-radius: 30px;
-  font-size: 12px;
-  padding: 10px 15px;
-}
-
