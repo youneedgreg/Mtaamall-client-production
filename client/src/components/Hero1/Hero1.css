@@ -27,7 +27,7 @@
   justify-content: space-between;
   width: 80%;
   padding-top: 20px;
-  background-color: #0beff9;
+  background-color: white;
   border-radius: 15px;
 }
 
@@ -37,12 +37,20 @@
   align-items: center;
 }
 
+/* Style for the icons */
+.category svg {
+  border: 2px solid black; /* Set the border thickness and color */
+  border-radius: 50%; /* Make the border circular */
+  padding: 10px; /* Adjust padding to control the space inside the circle */
+  box-sizing: content-box; /* Ensure padding doesn't affect the icon size */
+}
+
+/* Text styling remains the same */
 .category span {
   margin-top: 0.5rem;
   font-size: 1rem;
   color: black;
 }
-
 /* Welcome text */
 .welcome-text {
   text-align: center;

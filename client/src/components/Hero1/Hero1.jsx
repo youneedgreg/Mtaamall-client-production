@@ -14,19 +14,19 @@ const Hero1 = () => {
         <div className="flexCenter categories">
           <div className="category">
             <FaStore size={50} />
-            <span>Eatery</span>
+            <span>Eateries</span>
           </div>
           <div className="category">
             <FaCut size={50} />
-            <span>Grooming services</span>
+            <span>Grooming</span>
           </div>
           <div className="category">
             <FaGamepad size={50} />
-            <span>Recreational services</span>
+            <span>Recreation</span>
           </div>
           <div className="category">
             <FaTools size={50} />
-            <span>Electronics services</span>
+            <span>Services</span>
           </div>
           <div className="category">
             <FaCamera size={50} />
