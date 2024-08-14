@@ -30,7 +30,7 @@
   background-color: white;
   border-radius: 15px;
   border: 2px solid red;
-  height: 70px;
+  height: 90px;
 }
 
 .category {
@@ -49,7 +49,7 @@
 
 /* Text styling remains the same */
 .category span {
-  margin-top: 0.5rem;
+  margin-top: 0.1rem;
   font-size: 1rem;
   color: black;
 }
