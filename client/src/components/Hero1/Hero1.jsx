@@ -11,7 +11,7 @@ const Hero1 = () => {
       <div className="paddings innerWidth flexCenter hero-container">
 
         {/* Categories */}
-        <div className="flexCenter categories" style={{ backgroundColor: 'red'}}>
+        <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
           <div className="category">
             <FaStore size={50} />
             <span>Eateries</span>
@@ -36,8 +36,8 @@ const Hero1 = () => {
 
         {/* Welcome text */}
         <div className="welcome-text">
-          <h2>Welcome to MtaaMall,</h2>
-          <p>Where we unleash the power of endless possibilities in every click.</p>
+          <h2 style={{ fontSize: '1.5vw'}}>Welcome to<span style={{ color: 'red', fontSize:'2vw'}}> MtaaMall</span></h2>
+          <p style={{ fontSize: '1.5vw'}}>Where we unleash the power of endless possibilities in every click.</p>
         </div>
 
         {/* Banners */}
