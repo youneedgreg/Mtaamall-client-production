@@ -11,7 +11,7 @@ const Hero1 = () => {
       <div className="paddings innerWidth flexCenter hero-container">
 
         {/* Categories */}
-        <div className="flexCenter categories">
+        <div className="flexCenter categories" style={{ backgroundColor: 'red'}}>
           <div className="category">
             <FaStore size={50} />
             <span>Eateries</span>
