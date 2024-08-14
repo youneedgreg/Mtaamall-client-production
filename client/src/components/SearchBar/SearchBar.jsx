@@ -16,10 +16,10 @@ const SearchBar = ({ filter, setFilter }) => {
   return (
     <div
       className="flexCenter search-bar"
-      style={{ backgroundColor: 'lightgrey', borderRadius: '25px', padding: '10px' }}
+      style={{ backgroundColor: 'lightgrey', border: '2px solid red', borderRadius: '25px', padding: '10px' }}
       onClick={handleSearchClick} // Add click handler
     >
-      <FaSearchLocation color="red" size={25} />
+      <FaSearchLocation color="gray" size={25} />
       <input
         placeholder="Search for shop, Brand categories..."
         type="text"
