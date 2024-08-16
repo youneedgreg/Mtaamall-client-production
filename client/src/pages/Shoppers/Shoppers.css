@@ -104,7 +104,7 @@
   position: sticky;
   top: 0;
   z-index: 10; /* Ensure it stays on top */
-  background: gray; /* Set background to prevent overlap with other content */
+  background: lightgray; /* Set background to prevent overlap with other content */
 }
 
 .shops-list {
