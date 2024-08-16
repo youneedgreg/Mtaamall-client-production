@@ -65,12 +65,13 @@
   display: flex;
   gap: 1rem;
   justify-content: space-around; /* Adjust the spacing between categories */
-  width: 80%;
+  width: 100%;
   padding: 10px 15px; /* Add padding inside the container */
   background-color: white;
   border-radius: 15px;
   border: 2px solid red;
   height: auto; /* Allow height to adjust based on content */
+  position: sticky;
 }
 
 .category {
@@ -100,7 +101,7 @@
   position: sticky;
   top: 0;
   z-index: 10;
-  background: white;
+  background: gray;
 }
 
 .shops-list {
