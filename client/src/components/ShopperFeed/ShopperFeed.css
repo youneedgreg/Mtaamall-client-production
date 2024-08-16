@@ -185,7 +185,7 @@
   background-color: #ff5a5a;
   border: none;
   padding: 0.75rem 1.5rem;
-  border-radius: 5px;
+  border-radius: 15px;
   cursor: pointer;
   transition: background-color 200ms ease-in;
   font-size: 1rem;

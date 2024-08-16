@@ -5,6 +5,9 @@ import { useNavigate } from "react-router-dom";
 import Heart from "../Heart/Heart";
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
+import { FaWhatsapp } from "react-icons/fa";
+import { IoCallOutline } from "react-icons/io5";
+import { MdOutlineMessage } from "react-icons/md";
 
 const ShopCard = ({ card }) => {
   const { data, isError, isLoading } = useProperties();
@@ -89,9 +92,12 @@ const ShopCard = ({ card }) => {
           <p className="shop-card-description">{truncate(card.sdescription, { length: 150 })}</p>
         </div>
         <div className="shop-card-meta">
-          <button className="shop-card-social">Social media</button>
-          <button className="shop-card-message">Message</button>
-          <button className="shop-card-call">Call Us</button>
+          <button className="shop-card-call"><FaWhatsapp size={20}/>Message</button>
+          <button className="shop-card-call"><IoCallOutline size={20}/>Call Us</button>
+          <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
+        </div>
+        <div className="Review">
+
         </div>
       </div>
     </div>
