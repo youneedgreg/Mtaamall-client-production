@@ -12,12 +12,12 @@
   flex: 1;
 }
 
-.left-column .one{
+.left-column .one {
   border-width: 1px;
   border-style: solid;
   border-color: black;
   cursor: pointer;
-  padding:18px;
+  padding: 18px;
 }
 
 .middle-column {
@@ -72,6 +72,9 @@
   border: 2px solid red;
   height: auto; /* Allow height to adjust based on content */
   position: sticky;
+  top: 0;
+  z-index: 10; /* Ensure it stays on top */
+  background-color: white; /* Set background to prevent overlap with other content */
 }
 
 .category {
@@ -100,8 +103,8 @@
 .search-bar-wrapper {
   position: sticky;
   top: 0;
-  z-index: 10;
-  background: gray;
+  z-index: 10; /* Ensure it stays on top */
+  background: gray; /* Set background to prevent overlap with other content */
 }
 
 .shops-list {
