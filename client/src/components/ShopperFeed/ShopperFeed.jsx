@@ -63,7 +63,9 @@ const ShopCard = ({ card }) => {
 
         <div className="bookmark">
           <Heart id={card?.id} />
+          <Heart id={card?.id} />
         </div>
+        <Heart id={card?.id} />
       </div>
       <div className="shop-card-details">
         <div className="shop-card-images">
