@@ -85,6 +85,8 @@
   background-color: white;
   width: 90%;
   border-radius: 15px;
+  border-style: solid;
+  border-color: red;
   text-align: center;
 }
 
