@@ -149,9 +149,10 @@
 
 .shop-card-info .shop-card-address {
   font-weight: bold;
+  font-size: 1.2rem;
   color: black;
   margin-bottom: 1rem;
-  padding-bottom: 30px;
+  padding-top: 1px;
 }
 
 .shop-card-info .shop-card-about {
