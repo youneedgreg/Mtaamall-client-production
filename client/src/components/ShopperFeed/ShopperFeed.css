@@ -39,9 +39,15 @@
 
 .shop-card-header .left-section {
   display: flex;
-  flex-direction: column; /* Change back to column */
-  align-items: flex-start; /* Align items to the start (left) */
-  margin-left: 1rem; /* Space between the logo and text */
+  flex-direction: row;
+  align-items: center; /* Align the logo and text vertically */
+  margin-left: 0.5rem; /* Small margin to the left for spacing */
+}
+
+.shop-card-header .left-section .text-container {
+  display: flex;
+  flex-direction: column; /* Stack title and category vertically */
+  margin-left: 1rem; /* Space between the logo and the text */
 }
 
 .shop-card-header h2 {
@@ -54,7 +60,6 @@
   font-size: 1rem;
   color: #666;
   margin-top: 0.25rem; /* Space between title and category */
-  margin-left: 0; /* Reset left margin */
 }
 
 
