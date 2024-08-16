@@ -1,54 +1,63 @@
-import { useContext, useEffect, useState } from "react"
-import { FaBookmark } from "react-icons/fa";
-import useAuthCheck from "../../hooks/useAuthCheck"
-import { useMutation } from "react-query"
-import { useAuth0 } from "@auth0/auth0-react"
-import UserDetailContext from "../../context/UserDetailContext"
-import { checkFavourites, updateFavourites } from "../../utils/common"
-import { toFav } from "../../utils/api"
+// import { useContext, useEffect, useState } from "react"
+// import { FaBookmark } from "react-icons/fa";
+// import useAuthCheck from "../../hooks/useAuthCheck"
+// import { useMutation } from "react-query"
+// import { useAuth0 } from "@auth0/auth0-react"
+// import UserDetailContext from "../../context/UserDetailContext"
+// import { checkFavourites, updateFavourites } from "../../utils/common"
+// import { toFav } from "../../utils/api"
 
-const Heart = ({id}) => {
+import { FaBookmark } from "react-icons/fa"
 
-    const [heartColor, setHeartColor] = useState("yellow")
-    const {validateLogin} = useAuthCheck()
-    const {user} = useAuth0()
+// const Heart = ({id}) => {
 
-    const {
-        userDetails: { favourites, token },
-        setUserDetails,
-      } = useContext(UserDetailContext);
+//     const [heartColor, setHeartColor] = useState("yellow")
+//     const {validateLogin} = useAuthCheck()
+//     const {user} = useAuth0()
 
-      useEffect(()=> {
-            setHeartColor(()=> checkFavourites(id, favourites))
-      },[favourites])
+//     const {
+//         userDetails: { favourites, token },
+//         setUserDetails,
+//       } = useContext(UserDetailContext);
+
+//       useEffect(()=> {
+//             setHeartColor(()=> checkFavourites(id, favourites))
+//       },[favourites])
 
 
-    const {mutate} = useMutation({
-        mutationFn: () => toFav(id, user?.email, token),
-        onSuccess: ()=> {
-            setUserDetails((prev)=> (
-                {
-                    ...prev,
-                    favourites: updateFavourites(id, prev.favourites)
-                }
-            ))
-        }
-    })
+//     const {mutate} = useMutation({
+//         mutationFn: () => toFav(id, user?.email, token),
+//         onSuccess: ()=> {
+//             setUserDetails((prev)=> (
+//                 {
+//                     ...prev,
+//                     favourites: updateFavourites(id, prev.favourites)
+//                 }
+//             ))
+//         }
+//     })
 
-    const handleLike = () => {
-        if(validateLogin())
-        {
-            mutate()
-            setHeartColor((prev)=> prev === "green" ? "yellow": "green")
-        }
-    }
+//     const handleLike = () => {
+//         if(validateLogin())
+//         {
+//             mutate()
+//             setHeartColor((prev)=> prev === "green" ? "yellow": "green")
+//         }
+//     }
 
-  return (
-    <FaBookmark size={24} color={heartColor} onClick={(e)=> {
-        e.stopPropagation()
-        handleLike()
-    }}/>
-  )
+//   return (
+//     <FaBookmark size={24} color={heartColor} onClick={(e)=> {
+//         e.stopPropagation()
+//         handleLike()
+//     }}/>
+//   )
+// }
+
+// export default Heart
+const Heart = () => {
+    return (
+        <FaBookmark size={24} color="white"/>
+    )
 }
 
 export default Heart
