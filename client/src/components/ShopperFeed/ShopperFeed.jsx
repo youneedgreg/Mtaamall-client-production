@@ -57,7 +57,7 @@ const ShopCard = ({ card }) => {
   </div>
   <div className="text-container">
     <h2>{truncate(card.title, { length: 15 })}</h2>
-    <p className="category">{truncate(card.category, { length: 90 })}</p>
+    <p className="categoryt">{truncate(card.category, { length: 90 })}</p>
   </div>
 </div>
 
