@@ -76,6 +76,11 @@ export const bookVisit = async (date, propertyId, email, token) => {
   }
 };
 
+export const fetchShops = async () => {
+  const response = await fetch('/business/allbiz');
+  return response.json();
+};
+
 export const removeBooking = async (id, email, token) => {
   try {
     await api.post(
