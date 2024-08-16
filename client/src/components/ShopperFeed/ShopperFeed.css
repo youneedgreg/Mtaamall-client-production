@@ -54,7 +54,7 @@
   font-size: 1.5rem;
   color: #E53E3E;
   margin: 0; /* Reset margin for alignment */
-  padding-left: 0.5rem; /* Align text with a consistent start point */
+  padding-left: 0rem; /* Align text with a consistent start point */
 }
 
 .shop-card-header .categoryt {
@@ -62,7 +62,7 @@
   color: #666;
   margin-top: 0.15rem; /* Space between title and category */
   margin: 0; /* Reset margin for alignment */
-  padding-left: 0.5rem; /* Align text with a consistent start point */
+  padding-left: 0rem; /* Align text with a consistent start point */
 }
 
 
