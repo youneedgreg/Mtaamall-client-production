@@ -98,7 +98,7 @@ const ShopCard = ({ card }) => {
           <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
         </div>
       </div>
-      <div className="Review" style={{position: "absolute",backgroundColor: "green"}}>
+      <div className="Review" style={{position: "absolute", top: "100"}}>
         <input className="Thoughts"></input>
         <button className="send circle" style={{borderRadius: "50%",backgroundColor: "green"}}><IoSendOutline className="send"/></button>
         </div>
