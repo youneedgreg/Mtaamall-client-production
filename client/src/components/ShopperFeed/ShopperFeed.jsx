@@ -97,11 +97,11 @@ const ShopCard = ({ card }) => {
           <button className="shop-card-call"><IoCallOutline size={20}/>Call Us</button>
           <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
         </div>
-        <div className="Review">
+      </div>
+      <div className="Review">
         <input className="Thoughts"></input>
         <button className="send circle" style={{borderRadius: "50%",backgroundColor: "green"}}><IoSendOutline className="send"/></button>
         </div>
-      </div>
     </div>
   );
 };
