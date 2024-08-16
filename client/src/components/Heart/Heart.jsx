@@ -8,7 +8,7 @@ import { checkFavourites, updateFavourites } from "../../utils/common";
 import { toFav } from "../../utils/api";
 
 const Heart = ({ id }) => {
-    const [isFavorited, setIsFavorited] = useState(false);
+    const [heartColor, setHeartColor] = useState("yellow");
     const { validateLogin } = useAuthCheck();
     const { user } = useAuth0();
 
@@ -18,8 +18,12 @@ const Heart = ({ id }) => {
     } = useContext(UserDetailContext);
 
     useEffect(() => {
-        const isFav = checkFavourites(id, favourites);
-        setIsFavorited(isFav);
+        // Check if the item is in the user's favourites and set color accordingly
+        if (checkFavourites(id, favourites)) {
+            setHeartColor("green");
+        } else {
+            setHeartColor("yellow");
+        }
     }, [favourites, id]);
 
     const { mutate } = useMutation({
@@ -29,20 +33,21 @@ const Heart = ({ id }) => {
                 ...prev,
                 favourites: updateFavourites(id, prev.favourites),
             }));
-            setIsFavorited((prev) => !prev);
         },
     });
 
     const handleLike = () => {
         if (validateLogin()) {
             mutate();
+            // Toggle between green and yellow on click
+            setHeartColor((prev) => (prev === "green" ? "yellow" : "green"));
         }
     };
 
     return (
         <FaBookmark
             size={24}
-            color={isFavorited ? "green" : "yellow"}
+            color={heartColor}
             onClick={(e) => {
                 e.stopPropagation();
                 handleLike();
