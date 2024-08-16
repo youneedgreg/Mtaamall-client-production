@@ -45,6 +45,9 @@ const ShopCard = ({ card }) => {
     );
   }
 
+  // Extract the first image to use as the logo
+  const shopLogo = card.images && card.images.length > 0 ? card.images[0] : '';
+
   return (
     <div className="shop-card" onClick={() => navigate(`../properties/${card.id}`)}>
       <div className="shop-card-header">
@@ -52,7 +55,9 @@ const ShopCard = ({ card }) => {
           <h2>{truncate(card.title, { length: 15 })}</h2>
           <p className="category">{truncate(card.category, { length: 90 })}</p>
         </div>
-        <Heart id={card?.id} />
+        <div className="shop-logo">
+          <img src={shopLogo} alt="Shop Logo" />
+        </div>
         <div className="bookmark">
           <Heart id={card?.id} />
         </div>

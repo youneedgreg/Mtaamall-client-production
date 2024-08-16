@@ -29,9 +29,7 @@
 }
 
 .shop-card-header {
-  position: absolute;
-  top: 2rem;
-  left: 1rem;
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -57,13 +55,23 @@
   margin: 0.25rem 0 0 0;
 }
 
+.shop-logo {
+  margin-left: 1rem;
+}
+
+.shop-logo img {
+  width: 50px;  /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .shop-card-header .bookmark {
   margin-right: 1rem;
   font-size: 1.5rem;
   color: #E53E3E;
   cursor: pointer;
 }
-
 .shop-card-details {
   display: flex;
   flex-direction: column;
