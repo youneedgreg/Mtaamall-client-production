@@ -52,11 +52,11 @@ const ShopCard = ({ card }) => {
     <div className="shop-card" onClick={() => navigate(`../properties/${card.id}`)}>
       <div className="shop-card-header">
         <div className="left-section">
-          <h2>{truncate(card.title, { length: 15 })}</h2>
-          <p className="category">{truncate(card.category, { length: 90 })}</p>
-        </div>
         <div className="shop-logo">
           <img src={shopLogo} alt="Shop Logo" />
+        </div>
+          <h2>{truncate(card.title, { length: 15 })}</h2>
+          <p className="category">{truncate(card.category, { length: 90 })}</p>
         </div>
         <div className="bookmark">
           <Heart id={card?.id} />
