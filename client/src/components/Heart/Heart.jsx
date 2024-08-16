@@ -8,47 +8,47 @@ import { checkFavourites, updateFavourites } from "../../utils/common";
 import { toFav } from "../../utils/api";
 
 const Heart = ({ id }) => {
-  const [heartColor, setHeartColor] = useState("yellow"); // Default to yellow
-  const { validateLogin } = useAuthCheck();
-  const { user } = useAuth0();
+    const [isFavorited, setIsFavorited] = useState(false);
+    const { validateLogin } = useAuthCheck();
+    const { user } = useAuth0();
 
-  const {
-    userDetails: { favourites, token },
-    setUserDetails,
-  } = useContext(UserDetailContext);
+    const {
+        userDetails: { favourites, token },
+        setUserDetails,
+    } = useContext(UserDetailContext);
 
-  useEffect(() => {
-    const isFavorite = checkFavourites(id, favourites);
-    setHeartColor(isFavorite ? "green" : "yellow"); // Set color based on favorite status
-  }, [favourites, id]);
+    useEffect(() => {
+        const isFav = checkFavourites(id, favourites);
+        setIsFavorited(isFav);
+    }, [favourites, id]);
 
-  const { mutate } = useMutation({
-    mutationFn: () => toFav(id, user?.email, token),
-    onSuccess: () => {
-      setUserDetails((prev) => ({
-        ...prev,
-        favourites: updateFavourites(id, prev.favourites),
-      }));
-    },
-  });
+    const { mutate } = useMutation({
+        mutationFn: () => toFav(id, user?.email, token),
+        onSuccess: () => {
+            setUserDetails((prev) => ({
+                ...prev,
+                favourites: updateFavourites(id, prev.favourites),
+            }));
+            setIsFavorited((prev) => !prev);
+        },
+    });
 
-  const handleLike = () => {
-    if (validateLogin()) {
-      mutate();
-      setHeartColor((prev) => (prev === "yellow" ? "green" : "yellow")); // Toggle color
-    }
-  };
+    const handleLike = () => {
+        if (validateLogin()) {
+            mutate();
+        }
+    };
 
-  return (
-    <FaBookmark
-      size={24}
-      color={heartColor}
-      onClick={(e) => {
-        e.stopPropagation();
-        handleLike();
-      }}
-    />
-  );
+    return (
+        <FaBookmark
+            size={24}
+            color={isFavorited ? "green" : "yellow"}
+            onClick={(e) => {
+                e.stopPropagation();
+                handleLike();
+            }}
+        />
+    );
 };
 
 export default Heart;
