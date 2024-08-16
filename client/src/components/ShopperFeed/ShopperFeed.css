@@ -39,21 +39,22 @@
 
 .shop-card-header .left-section {
   display: flex;
-  flex-direction: row; /* Change from column to row */
-  align-items: center; /* Align items vertically */
-  margin-left: 1rem; /* Add some space between the logo and text */
+  flex-direction: column; /* Change back to column */
+  align-items: flex-start; /* Align items to the start (left) */
+  margin-left: 1rem; /* Space between the logo and text */
 }
 
 .shop-card-header h2 {
   font-size: 1.5rem;
   color: #E53E3E;
-  margin-left: 0.5rem; /* Space between title and category */
+  margin: 0; /* Reset margin */
 }
 
 .shop-card-header .category {
   font-size: 1rem;
   color: #666;
-  margin-left: 1rem; /* Space between title and category */
+  margin-top: 0.25rem; /* Space between title and category */
+  margin-left: 0; /* Reset left margin */
 }
 
 
