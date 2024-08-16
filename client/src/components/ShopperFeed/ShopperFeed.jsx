@@ -8,6 +8,7 @@ import { PuffLoader } from "react-spinners";
 import { FaWhatsapp } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineMessage } from "react-icons/md";
+import { IoSendOutline } from "react-icons/io5";
 
 const ShopCard = ({ card }) => {
   const { data, isError, isLoading } = useProperties();
@@ -97,7 +98,8 @@ const ShopCard = ({ card }) => {
           <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
         </div>
         <div className="Review">
-
+        <input className="Thoughts"></input>
+        <button className="send circle" style={{borderRadius: "50%",backgroundColor: "green"}}><IoSendOutline className="send"/></button>
         </div>
       </div>
     </div>
