@@ -53,13 +53,16 @@
 .shop-card-header h2 {
   font-size: 1.5rem;
   color: #E53E3E;
-  margin: 0; /* Reset margin */
+  margin: 0; /* Reset margin for alignment */
+  padding-left: 0.5rem; /* Align text with a consistent start point */
 }
 
 .shop-card-header .category {
   font-size: 1rem;
   color: #666;
-  margin-top: 0.25rem; /* Space between title and category */
+  margin-top: 0.15rem; /* Space between title and category */
+  margin: 0; /* Reset margin for alignment */
+  padding-left: 0.5rem; /* Align text with a consistent start point */
 }
 
 
