@@ -80,6 +80,7 @@
 .shop-card-header .bookmark {
   margin-right: 1rem;
   font-size: 1.5rem;
+  color: yellow;
   cursor: pointer;
 }
 .shop-card-details {
