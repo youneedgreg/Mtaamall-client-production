@@ -51,13 +51,28 @@ const Shoppers = () => {
         <div className="search-bar-wrapper">
           <SearchBar filter={filter} setFilter={setFilter} />
         </div>
-        <div className="flexCenter categories">
-          {categories.map(category => (
-            <div key={category.name} className="category">
-              {category.icon}
-              <span>{category.name}</span>
-            </div>
-          ))}
+        {/* Categories */}
+        <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
+          <div className="category">
+            <FaStore size={50} />
+            <span>Eateries</span>
+          </div>
+          <div className="category">
+            <FaCut size={50} />
+            <span>Grooming</span>
+          </div>
+          <div className="category">
+            <FaGamepad size={50} />
+            <span>Recreation</span>
+          </div>
+          <div className="category">
+            <FaTools size={50} />
+            <span>Services</span>
+          </div>
+          <div className="category">
+            <FaCamera size={50} />
+            <span>Photography</span>
+          </div>
         </div>
         <div className="shops-list">
           {filteredShops.map(shop => (

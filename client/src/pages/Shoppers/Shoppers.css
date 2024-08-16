@@ -60,14 +60,17 @@
   width: 50px;
 }
 
+/* Categories */
 .categories {
   display: flex;
-  gap: 0.5rem;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0.5rem;
+  gap: 1rem;
+  justify-content: space-around; /* Adjust the spacing between categories */
+  width: 80%;
+  padding: 10px 15px; /* Add padding inside the container */
   background-color: white;
   border-radius: 15px;
+  border: 2px solid red;
+  height: auto; /* Allow height to adjust based on content */
 }
 
 .category {
@@ -76,10 +79,23 @@
   align-items: center;
 }
 
+/* Style for the icons */
+.category svg {
+  width: 35px; /* Set the icon width */
+  height: 35px; /* Set the icon height */
+  border: 2px solid black; /* Set the border thickness and color */
+  border-radius: 50%; /* Make the border circular */
+  padding: 5px; /* Adjust padding to control the space inside the circle */
+  box-sizing: border-box; /* Ensure padding doesn't affect the icon size */
+}
+
+/* Text styling remains the same */
 .category span {
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; /* Increase margin for better spacing */
   font-size: 1rem;
   color: black;
+}
+: black;
 }
 
 .search-bar-wrapper {
