@@ -80,7 +80,7 @@
 .shop-card-header .bookmark {
   margin-right: 1rem;
   font-size: 1.5rem;
-  color: #E53E3E;
+  color: green;
   cursor: pointer;
 }
 .shop-card-details {
@@ -151,7 +151,7 @@
   font-weight: bold;
   color: black;
   margin-bottom: 1rem;
-  padding-bottom: -5px;
+  padding-bottom: 30px;
 }
 
 .shop-card-info .shop-card-about {
