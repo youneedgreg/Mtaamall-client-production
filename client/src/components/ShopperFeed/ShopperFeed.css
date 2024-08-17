@@ -174,7 +174,7 @@
   display: flex;
   justify-content: space-between; /* Space buttons evenly */
   position: absolute; /* Position it at the bottom */
-  padding-top: 10px;
+  padding-top: 0px;
   left: 1rem;
   bottom: 0.5rem; /* Push it further down */
   right: 1rem;
