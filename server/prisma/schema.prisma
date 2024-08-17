@@ -23,6 +23,7 @@ model Business {
     sdescription   String
     ldescription   String
     category       String
+    subcategory    Json
     address        String
     city           String
     country        String
@@ -34,5 +35,5 @@ model Business {
     createdAt      DateTime @default(now())
     updatedAt      DateTime @updatedAt
 
-    @@unique(fields: [address, userEmail])
+    @@unique(fields: [ userEmail])
 }
