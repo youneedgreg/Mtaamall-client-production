@@ -53,7 +53,7 @@
 }
 
 .right-column:hover {
-  width: 200px;
+  width: 199px;
 }
 
 .right-column:not(:hover) {
