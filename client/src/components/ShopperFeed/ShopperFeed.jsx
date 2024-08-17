@@ -9,6 +9,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineMessage } from "react-icons/md";
 import { IoSendOutline } from "react-icons/io5";
+import { SiTheconversation } from "react-icons/si";
 
 const ShopCard = ({ card }) => {
   const { data, isError, isLoading } = useProperties();
@@ -103,6 +104,7 @@ const ShopCard = ({ card }) => {
   <button className="send circle" style={{ borderRadius: "50%", padding: '6px', backgroundColor: "green", marginLeft: "0.5rem" }}>
     <IoSendOutline className="send"/>
   </button>
+  <SiTheconversation />
 </div>
 
     </div>
