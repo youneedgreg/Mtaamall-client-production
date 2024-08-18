@@ -175,7 +175,7 @@
   position: absolute; /* Position it at the bottom */
   padding-top: 0px;
   left: 1rem;
-  bottom: 4.5rem; /* Push it further down */
+  bottom: 6rem; /* Push it further down */
   right: 1rem;
   margin-top: auto; /* Ensure it's pushed to the bottom */
 }
@@ -184,6 +184,7 @@
 .shop-card-meta button {
   background-color: #ff5a5a;
   border: none;
+  margin: auto;
   padding: 0.75rem 1.5rem;
   border-radius: 15px;
   cursor: pointer;

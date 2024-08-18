@@ -104,7 +104,7 @@ const ShopCard = ({ card }) => {
   <button className="send circle" style={{ borderRadius: "50%", padding: '6px', backgroundColor: "green", marginLeft: "0.5rem" }}>
     <IoSendOutline className="send"/>
   </button>
-  <div><SiTheconversation size={30} /><p>250 reviews</p></div>
+  <div style={{right: "0px"}} ><SiTheconversation size={30} /><p>250 reviews</p></div>
 </div>
 
     </div>
