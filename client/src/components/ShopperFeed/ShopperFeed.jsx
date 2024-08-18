@@ -99,7 +99,7 @@ const ShopCard = ({ card }) => {
           <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
         </div>
       </div>
-      <div className="Review" style={{ position: "absolute", bottom: "0", left: "0", right: "0", padding: "1rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+      <div className="Review" style={{ position: "absolute", bottom: "5rem", left: "0", right: "0", padding: "1rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
   <div style={{ display: "flex", alignItems: "center", width: "75%"}}>
     <input className="Thoughts" style={{ width: "60%", borderRadius: "25px", paddingTop: '6px', paddingBottom: '6px' }} placeholder="   Send Reviews" />
     <button className="send circle" style={{ borderRadius: "50%", width: "40px", height: "40px", backgroundColor: "green", marginLeft: "0.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
@@ -109,6 +109,11 @@ const ShopCard = ({ card }) => {
   <div style={{ display: "flex", alignItems: "center" }}>
     <SiTheconversation size={30} style={{ marginRight: "0.5rem" }} />
     <p style={{ margin: 0 }}>250 reviews</p>
+  </div>
+  <div className="Ratings">
+    <div className="Rating 1"></div>
+    <div className="Rating 1"></div>
+    <div className="Rating 1"></div>
   </div>
 </div>
 

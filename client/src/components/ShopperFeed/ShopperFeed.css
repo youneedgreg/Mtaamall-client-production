@@ -175,7 +175,7 @@
   position: absolute; /* Position it at the bottom */
   padding-top: 0px;
   left: 1rem;
-  bottom: 6rem; /* Push it further down */
+  bottom: 7rem; /* Push it further down */
   right: 1rem;
   margin-top: auto; /* Ensure it's pushed to the bottom */
 }
