@@ -58,6 +58,7 @@ const Header = () => {
         {/* for medium and small screens */}
         <div
           className="menu-icon"
+          style={{color: 'black'}}
           onClick={() => setMenuOpened((prev) => !prev)}
         >
           <BiMenuAltRight size={30} />
