@@ -99,13 +99,19 @@ const ShopCard = ({ card }) => {
           <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
         </div>
       </div>
-      <div className="Review" style={{ position: "absolute", bottom: "0", left: "0", right: "0", padding: "1rem", display: "flex" }}>
-  <input className="Thoughts" style={{ width: "60%", borderRadius: "25px", paddingTop: '6px', paddingBottom: '6px' }} placeholder="   Send Reviews"/>
-  <button className="send circle" style={{ borderRadius: "50%", padding: '6px', backgroundColor: "green", marginLeft: "0.5rem" }}>
-    <IoSendOutline className="send"/>
-  </button>
-  <div style={{right: "0px"}} ><SiTheconversation size={30} /><p>250 reviews</p></div>
+      <div className="Review" style={{ position: "absolute", bottom: "0", left: "0", right: "0", padding: "1rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+  <div style={{ display: "flex", alignItems: "center" }}>
+    <input className="Thoughts" style={{ width: "60%", borderRadius: "25px", paddingTop: '6px', paddingBottom: '6px' }} placeholder="   Send Reviews" />
+    <button className="send circle" style={{ borderRadius: "50%", width: "40px", height: "40px", backgroundColor: "green", marginLeft: "0.5rem", display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <IoSendOutline className="send" />
+    </button>
+  </div>
+  <div style={{ display: "flex", alignItems: "center" }}>
+    <SiTheconversation size={30} style={{ marginRight: "0.5rem" }} />
+    <p style={{ margin: 0 }}>250 reviews</p>
+  </div>
 </div>
+
 
     </div>
   );
