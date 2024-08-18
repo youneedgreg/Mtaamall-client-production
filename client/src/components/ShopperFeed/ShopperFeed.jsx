@@ -99,7 +99,7 @@ const ShopCard = ({ card }) => {
           <button className="shop-card-call"><MdOutlineMessage size={20}/>Social media</button>
         </div>
       </div>
-      <div className="Review" style={{ position: "absolute", bottom: "0", left: "0", right: "0", padding: "1rem" }}>
+      <div className="Review" style={{ position: "absolute", bottom: "0", left: "0", right: "0", padding: "1rem", display: "flex" }}>
   <input className="Thoughts" style={{ width: "60%", borderRadius: "25px", paddingTop: '6px', paddingBottom: '6px' }} placeholder="   Send Reviews"/>
   <button className="send circle" style={{ borderRadius: "50%", padding: '6px', backgroundColor: "green", marginLeft: "0.5rem" }}>
     <IoSendOutline className="send"/>
