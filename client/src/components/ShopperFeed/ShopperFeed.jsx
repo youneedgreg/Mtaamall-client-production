@@ -10,6 +10,7 @@ import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineMessage } from "react-icons/md";
 import { IoSendOutline } from "react-icons/io5";
 import { SiTheconversation } from "react-icons/si";
+import { CiStar } from "react-icons/ci";
 
 const ShopCard = ({ card }) => {
   const { data, isError, isLoading } = useProperties();
@@ -111,9 +112,9 @@ const ShopCard = ({ card }) => {
     <p style={{ margin: 0 }}>250 reviews</p>
   </div>
   <div className="Ratings">
-    <div className="Rating 1"></div>
-    <div className="Rating 1"></div>
-    <div className="Rating 1"></div>
+    <div className="Rating 1">Ambience<CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></div>
+    <div className="Rating 1">Safety<CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></div>
+    <div className="Rating 1">Variety<CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></div>
   </div>
 </div>
 
