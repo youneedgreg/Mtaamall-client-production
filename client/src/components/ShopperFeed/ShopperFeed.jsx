@@ -112,7 +112,7 @@ const ShopCard = ({ card }) => {
     <p style={{ margin: 0 }}>250 reviews</p>
   </div>
 </div>
-<div className="Ratings" style={{position: "absolute", bottom: "4rem"}}>
+<div className="Ratings" style={{position: "absolute", bottom: "4rem", display: "flex",  justifyContent: "space-between", width: "100%"}}>
     <div className="Rating 1">Ambience<br/><CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></div>
     <div className="Rating 1">Safety<br/><CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></div>
     <div className="Rating 1">Variety<br/><CiStar /><CiStar /><CiStar /><CiStar /><CiStar /></div>
