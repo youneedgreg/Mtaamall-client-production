@@ -4,52 +4,49 @@
   z-index: 1;
   padding-bottom: 2rem;
   background-color: white;
+  padding: 1rem;
 }
 
 .hero-container {
-  justify-content: space-around;
-  align-items: flex-end;
-}
-
-/* Header */
-.search-bar-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center; /* Centering the search bar */
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Categories */
 .categories {
   display: flex;
+  flex-wrap: wrap; /* Allow categories to wrap on smaller screens */
   gap: 1rem;
-  justify-content: space-around; /* Adjust the spacing between categories */
-  width: 80%;
-  padding: 10px 15px; /* Add padding inside the container */
+  justify-content: space-around;
+  width: 100%; /* Make it full width on smaller screens */
+  max-width: 1200px;
+  padding: 10px 15px;
   background-color: white;
   border-radius: 15px;
   border: 2px solid red;
-  height: auto; /* Allow height to adjust based on content */
 }
 
 .category {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1; /* Make categories flexible */
+  min-width: 120px; /* Ensure a minimum width for icons and text */
 }
 
 /* Style for the icons */
 .category svg {
-  width: 35px; /* Set the icon width */
-  height: 35px; /* Set the icon height */
-  border: 2px solid black; /* Set the border thickness and color */
-  border-radius: 50%; /* Make the border circular */
-  padding: 5px; /* Adjust padding to control the space inside the circle */
-  box-sizing: border-box; /* Ensure padding doesn't affect the icon size */
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
-/* Text styling remains the same */
+/* Text styling */
 .category span {
-  margin-top: 0.5rem; /* Increase margin for better spacing */
+  margin-top: 0.5rem;
   font-size: 1rem;
   color: black;
 }
@@ -57,42 +54,93 @@
 /* Welcome text */
 .welcome-text {
   text-align: center;
+  margin: 2rem 0; /* Add margin for spacing */
 }
 
 .welcome-text h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .welcome-text p {
   margin-top: 0.5rem;
+  font-size: 1rem;
   color: black;
 }
 
 /* Banners */
 .banners {
   display: flex;
+  flex-wrap: wrap; /* Allow banners to wrap on smaller screens */
   gap: 1rem;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
 }
 
 .banner {
   flex: 1;
+  min-width: 250px; /* Ensure banners have a minimum width */
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem; /* Increased padding */
+  padding: 2rem; /* Adjust padding for better spacing */
   background-color: white;
-  width: 100%;
   border-radius: 15px;
-  border-style: solid;
-  border-color: red;
+  border: 2px solid red;
   text-align: center;
 }
 
 .banner img {
-  width: 200px; /* Increased width */
-  height: 199px; /* Increased height */
+  width: 100%; /* Ensure images are responsive */
+  max-width: 300px; /* Limit the max width */
+  height: auto; /* Maintain aspect ratio */
   object-fit: cover;
   border-radius: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 0;
+  }
+
+  .categories {
+    gap: 0.5rem;
+    padding: 5px;
+  }
+
+  .welcome-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.875rem;
+  }
+
+  .banner {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .welcome-text p {
+    font-size: 0.75rem;
+  }
+
+  .categories {
+    flex-direction: column; /* Stack categories vertically */
+    align-items: center;
+  }
+
+  .banners {
+    flex-direction: column; /* Stack banners vertically */
+    align-items: center;
+  }
+
+  .banner img {
+    max-width: 200px;
+  }
 }

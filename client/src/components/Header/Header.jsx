@@ -37,23 +37,26 @@ const Header = () => {
 
         {/* menu */}
         <OutsideClickHandler
-          onOutsideClick={() => {
-            setMenuOpened(false);
-          }}
-        >
-          <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
-            {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
-            <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
-            {/* login button */}
-            {!isAuthenticated ? (
-              <button className="button" onClick={loginWithRedirect}>
-                Login
-              </button>
-            ) : (
-              <ProfileMenu user={user} logout={logout} />
-            )}
-          </div>
-        </OutsideClickHandler>
+  onOutsideClick={() => {
+    setMenuOpened(false);
+  }}
+>
+  {menuOpened && (
+    <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
+      {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
+      <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
+      {/* login button */}
+      {!isAuthenticated ? (
+        <button className="button" onClick={loginWithRedirect}>
+          Login
+        </button>
+      ) : (
+        <ProfileMenu user={user} logout={logout} />
+      )}
+    </div>
+  )}
+</OutsideClickHandler>
+
 
         {/* for medium and small screens */}
         <div
