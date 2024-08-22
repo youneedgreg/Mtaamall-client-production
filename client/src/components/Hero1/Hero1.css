@@ -21,13 +21,13 @@
 /* Categories */
 .categories {
   display: flex;
-  gap: 1rem;
+  gap: 1vw; /* Responsive gap between categories */
   justify-content: space-around; /* Adjust the spacing between categories */
   width: 80%;
-  padding: 10px 15px; /* Add padding inside the container */
+  padding: 1vw 2vw; /* Responsive padding inside the container */
   background-color: white;
-  border-radius: 15px;
-  border: 2px solid red;
+  border-radius: 1vw;
+  border: 0.2vw solid red;
   height: auto; /* Allow height to adjust based on content */
 }
 
@@ -39,39 +39,18 @@
 
 /* Style for the icons */
 .category svg {
-  width: 35px; /* Set the icon width */
-  height: 35px; /* Set the icon height */
-  border: 2px solid black; /* Set the border thickness and color */
+  width: 3vw; /* Responsive icon width */
+  height: 3vw; /* Responsive icon height */
+  border: 0.2vw solid black; /* Responsive border thickness and color */
   border-radius: 50%; /* Make the border circular */
-  padding: 5px; /* Adjust padding to control the space inside the circle */
+  padding: 0.5vw; /* Adjust padding to control the space inside the circle */
   box-sizing: border-box; /* Ensure padding doesn't affect the icon size */
 }
 
 .category span {
-  margin-top: 0.5rem; /* Increase margin for better spacing */
-  font-size: 1rem;
+  margin-top: 0.5vw; /* Responsive margin for better spacing */
+  font-size: 1.5vw; /* Responsive font size */
   color: black;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .category svg {
-    width: 30px;
-    height: 30px;
-  }
-  .category span {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .category svg {
-    width: 25px;
-    height: 25px;
-  }
-  .category span {
-    font-size: 0.8rem;
-  }
 }
 
 /* Welcome text */
@@ -80,18 +59,19 @@
 }
 
 .welcome-text h2 {
-  font-size: 1.5rem;
+  font-size: 3vw; /* Responsive font size */
 }
 
 .welcome-text p {
-  margin-top: 0.5rem;
+  margin-top: 1vw; /* Responsive margin */
+  font-size: 2vw; /* Responsive font size */
   color: black;
 }
 
 /* Banners */
 .banners {
   display: flex;
-  gap: 1rem;
+  gap: 1vw; /* Responsive gap between banners */
   justify-content: space-around;
   width: 100%;
 }
@@ -101,18 +81,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem; /* Increased padding */
+  padding: 3vw; /* Responsive padding */
   background-color: white;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 1vw;
   border-style: solid;
   border-color: red;
   text-align: center;
 }
 
 .banner img {
-  width: 200px; /* Increased width */
-  height: 199px; /* Increased height */
+  width: 20vw; /* Responsive image width */
+  height: 20vw; /* Responsive image height */
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 1vw;
 }
