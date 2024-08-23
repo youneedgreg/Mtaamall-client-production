@@ -1,31 +1,31 @@
 .shop-card {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 2vw;
+  border-radius: 1.5vw;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.8vw 1.6vw rgba(0, 0, 0, 0.1);
   transition: all 300ms ease-in;
   cursor: pointer;
   position: relative;
   width: 100%;
   height: 90vh;
-  margin: 1rem 0;
+  margin: 2vw 0;
   box-sizing: border-box;
 }
 
 .shop-card-heart {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
+  top: 2vw;
+  right: 2vw;
+  font-size: 3vw;
   color: #E53E3E;
   cursor: pointer;
 }
 
 .shop-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1vw);
+  box-shadow: 0 1.6vw 3.2vw rgba(0, 0, 0, 0.2);
 }
 
 .shop-card-header {
@@ -41,86 +41,86 @@
   display: flex;
   flex-direction: row;
   align-items: center; /* Align the logo and text vertically */
-  margin-left: 0.5rem; /* Small margin to the left for spacing */
+  margin-left: 1vw; /* Small margin to the left for spacing */
 }
 
 .shop-card-header .left-section .text-container {
   display: flex;
   flex-direction: column; /* Stack title and category vertically */
-  margin-left: 1rem; /* Space between the logo and the text */
+  margin-left: 2vw; /* Space between the logo and the text */
 }
 
 .shop-card-header h2 {
-  font-size: 1.5rem;
+  font-size: 3vw;
   color: #E53E3E;
   margin: 0; /* Reset margin for alignment */
-  padding-left: 0rem; /* Align text with a consistent start point */
+  padding-left: 0; /* Align text with a consistent start point */
 }
 
 .shop-card-header .categoryt {
-  font-size: 1rem;
+  font-size: 2vw;
   color: #666;
-  margin-top: 0.15rem; /* Space between title and category */
+  margin-top: 0.3vw; /* Space between title and category */
   margin: 0; /* Reset margin for alignment */
-  padding-left: 0rem; /* Align text with a consistent start point */
+  padding-left: 0; /* Align text with a consistent start point */
 }
 
-
 .shop-logo {
-  margin-left: 0rem;
-  padding-top: 1rem;
+  margin-left: 0;
+  padding-top: 2vw;
 }
 
 .shop-logo img {
-  width: 50px;  /* Adjust size as needed */
-  height: 50px;
+  width: 10vw; /* Responsive size */
+  height: 10vw; /* Responsive size */
   border-radius: 50%;
   object-fit: cover;
 }
 
 .shop-card-header .bookmark {
-  margin-right: 1rem;
-  font-size: 1.5rem;
+  margin-right: 2vw;
+  font-size: 3vw;
   color: yellow;
   cursor: pointer;
 }
+
 .shop-card-details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  margin-top: 5rem;
-  padding-bottom: 4rem; /* Add padding to ensure space for buttons */
+  margin-top: 10vw;
+  padding-bottom: 8vw; /* Add padding to ensure space for buttons */
 }
 
 .shop-card-images {
   position: absolute;
   width: 50%;
   height: 39%;
-  right: 1rem;
+  right: 2vw;
   transform: translateY(-50%);
-  border-radius: 1rem;
+  border-radius: 2vw;
   overflow: hidden;
-  margin: 4rem 0 1rem 0;
+  margin: 8vw 0 2vw 0;
 }
 
 .shop-card-images img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 1rem;
+  border-radius: 2vw;
 }
 
 .shop-card-images .prev, .shop-card-images .next {
   position: absolute;
   top: 50%;
-  width: 30px;
-  height: 30px;
-  margin-top: -15px;
-  padding: 2px;
+  width: 6vw;
+  height: 6vw;
+  margin-top: -3vw;
+  padding: 0.5vw;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 4vw;
   transition: 0.6s ease;
   border-radius: 50%;
   user-select: none;
@@ -128,11 +128,11 @@
 }
 
 .shop-card-images .prev {
-  left: 5px;
+  left: 1vw;
 }
 
 .shop-card-images .next {
-  right: 5px;
+  right: 1vw;
 }
 
 .shop-card-images .prev:hover, .shop-card-images .next:hover {
@@ -141,7 +141,7 @@
 
 .shop-card-info {
   position: absolute;
-  left: 1rem;
+  left: 2vw;
   top: 30%;
   transform: translateY(-50%);
   max-width: 45%;
@@ -149,14 +149,14 @@
 
 .shop-card-info .shop-card-address {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 2.5vw;
   color: black;
-  margin-bottom: 1rem;
+  margin-bottom: 2vw;
   padding-top: 1px;
 }
 
 .shop-card-info .shop-card-about {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1vw;
   color: red;
 }
 
@@ -173,13 +173,12 @@
   display: flex;
   justify-content: space-between; /* Space buttons evenly */
   position: absolute; /* Position it at the bottom */
-  padding-top: 0px;
-  left: 1rem;
-  bottom: 12rem; /* Push it further down */
-  right: 1rem;
+  padding-top: 0;
+  left: 2vw;
+  bottom: 24vw; /* Push it further down */
+  right: 2vw;
   margin-top: auto; /* Ensure it's pushed to the bottom */
 }
-
 
 .shop-card-meta button {
   background-color: #ff5a5a;
@@ -187,11 +186,11 @@
   margin: auto;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 15px;
+  padding: 1.5vw 3vw;
+  border-radius: 3vw;
   cursor: pointer;
   transition: background-color 200ms ease-in;
-  font-size: 1rem;
+  font-size: 2vw;
   color: #fff;
 }
 
@@ -222,27 +221,28 @@
 .shop-card-meta .shop-card-call:hover {
   background-color: #ff3333;
 }
+
 .review {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  border-top: 1px solid #ccc;
+  padding: 2vw;
+  border-top: 0.2vw solid #ccc;
   margin-top: auto;
-  top:100px;
+  top: 20vw;
   position: absolute;
 }
 
 .review .thoughts {
   flex-grow: 1;
-  padding: 0.5rem;
-  border-radius: 15px;
-  border: 1px solid #ccc;
+  padding: 1vw;
+  border-radius: 3vw;
+  border: 0.2vw solid #ccc;
 }
 
 .review .send {
-  margin-left: 1rem;
-  padding: 0.5rem;
+  margin-left: 2vw;
+  padding: 1vw;
   background-color: green;
   color: #fff;
   border: none;
