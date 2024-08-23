@@ -1,9 +1,11 @@
+/* Container and Columns */
 .shoppers-container {
   display: flex;
   height: 100vh;
   background-color: white;
 }
 
+/* Left, Middle, and Right Columns */
 .left-column, .right-column, .middle-column {
   border: 1px solid #ddd;
 }
@@ -34,6 +36,7 @@
   transition: width 0.3s ease;
 }
 
+/* Icons Section */
 .icons {
   display: flex;
   flex-direction: column;
@@ -52,6 +55,7 @@
   background: #f0f0f0;
 }
 
+/* Menu Hover Effects for Desktop */
 .right-column:hover {
   width: 199px;
 }
@@ -60,21 +64,21 @@
   width: 50px;
 }
 
-/* Categories */
+/* Categories Styling */
 .categories {
   display: flex;
   gap: 1rem;
-  justify-content: space-around; /* Adjust the spacing between categories */
+  justify-content: space-around;
   width: 100%;
-  padding: 10px 15px; /* Add padding inside the container */
+  padding: 10px 15px;
   background-color: white;
   border-radius: 15px;
   border: 2px solid red;
-  height: auto; /* Allow height to adjust based on content */
+  height: auto;
   position: sticky;
   top: 0;
-  z-index: 10; /* Ensure it stays on top */
-  background-color: white; /* Set background to prevent overlap with other content */
+  z-index: 10;
+  background-color: white;
 }
 
 .category {
@@ -83,32 +87,118 @@
   align-items: center;
 }
 
-/* Style for the icons */
 .category svg {
-  width: 35px; /* Set the icon width */
-  height: 35px; /* Set the icon height */
-  border: 2px solid black; /* Set the border thickness and color */
-  border-radius: 50%; /* Make the border circular */
-  padding: 5px; /* Adjust padding to control the space inside the circle */
-  box-sizing: border-box; /* Ensure padding doesn't affect the icon size */
+  width: 35px;
+  height: 35px;
+  border: 2px solid black;
+  border-radius: 50%;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
-/* Text styling remains the same */
 .category span {
-  margin-top: 0.5rem; /* Increase margin for better spacing */
+  margin-top: 0.5rem;
   font-size: 1rem;
   color: black;
 }
 
+/* Search Bar */
 .search-bar-wrapper {
   position: sticky;
   top: 0;
-  z-index: 10; /* Ensure it stays on top */
-  background: lightgray; /* Set background to prevent overlap with other content */
+  z-index: 10;
+  background: lightgray;
 }
 
 .shops-list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+}
+
+/* Responsive Menu Buttons for Mobile */
+.menu-button {
+  display: none;
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 20;
+}
+
+.menu-button.left {
+  top: 10px;
+  left: 10px;
+}
+
+.menu-button.right {
+  top: 10px;
+  right: 10px;
+}
+
+/* Mobile Menu Styling */
+.left-column, .right-column {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background: white;
+  width: 75%;
+  max-width: 300px;
+  z-index: 15;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.right-column {
+  right: 0;
+  transform: translateX(100%);
+}
+
+.left-column.open {
+  transform: translateX(0);
+}
+
+.right-column.open {
+  transform: translateX(0);
+}
+
+/* Blur Effect */
+.shoppers-container::before {
+  content: '';
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.left-column.open ~ .shoppers-container::before,
+.right-column.open ~ .shoppers-container::before {
+  display: block;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .left-column, .right-column {
+    flex: none;
+  }
+
+  .right-column:hover,
+  .left-column:hover {
+    width: 75%;
+  }
+
+  .right-column:not(:hover),
+  .left-column:not(:hover) {
+    width: 50px;
+  }
 }

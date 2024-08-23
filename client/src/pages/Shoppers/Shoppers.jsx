@@ -17,6 +17,8 @@ const Shoppers = () => {
   const [filter, setFilter] = React.useState("");
   const [shops, setShops] = useState([]);
   const [filteredShops, setFilteredShops] = useState([]);
+  const [isLeftMenuOpen, setIsLeftMenuOpen] = useState(false);
+  const [isRightMenuOpen, setIsRightMenuOpen] = useState(false);
 
   useEffect(() => {
     const fetchShops = async () => {
@@ -37,42 +39,46 @@ const Shoppers = () => {
     );
   }, [filter, shops]);
 
+  const toggleLeftMenu = () => {
+    setIsLeftMenuOpen(!isLeftMenuOpen);
+    setIsRightMenuOpen(false); // Close the right menu if open
+  };
+
+  const toggleRightMenu = () => {
+    setIsRightMenuOpen(!isRightMenuOpen);
+    setIsLeftMenuOpen(false); // Close the left menu if open
+  };
+
   return (
     <div className="shoppers-container">
-      <div className="left-column">
-        {/* Left column content can be added here */}
+      <button className="menu-button left" onClick={toggleLeftMenu}>
+        ☰
+      </button>
+      <button className="menu-button right" onClick={toggleRightMenu}>
+        ☰
+      </button>
+      
+      <div className={`left-column ${isLeftMenuOpen ? 'open' : ''}`}>
+        {/* Left column content */}
         <div className='one'>Menu</div>
         <div className='one'>Menu1</div>
         <div className='one'>Menu</div>
         <div className='one'>Menu</div>
         <div className='one'>Menu</div>
       </div>
+      
       <div className="middle-column">
         <div className="search-bar-wrapper">
           <SearchBar filter={filter} setFilter={setFilter} />
         </div>
         {/* Categories */}
         <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
-          <div className="category">
-            <FaStore size={50} />
-            <span>Eateries</span>
-          </div>
-          <div className="category">
-            <FaCut size={50} />
-            <span>Grooming</span>
-          </div>
-          <div className="category">
-            <FaGamepad size={50} />
-            <span>Recreation</span>
-          </div>
-          <div className="category">
-            <FaTools size={50} />
-            <span>Services</span>
-          </div>
-          <div className="category">
-            <FaCamera size={50} />
-            <span>Photography</span>
-          </div>
+          {categories.map((category, index) => (
+            <div className="category" key={index}>
+              {category.icon}
+              <span>{category.name}</span>
+            </div>
+          ))}
         </div>
         <div className="shops-list">
           {filteredShops.map(shop => (
@@ -80,8 +86,9 @@ const Shoppers = () => {
           ))}
         </div>
       </div>
-      <div className="right-column">
-        {/* Right column content can be added here */}
+      
+      <div className={`right-column ${isRightMenuOpen ? 'open' : ''}`}>
+        {/* Right column content */}
         <div className="icons">
           <div className="icon">Icon 1</div>
           <div className="icon">Icon 2</div>
