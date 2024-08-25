@@ -78,7 +78,7 @@ const Shoppers = ({ card }) => {
         <div className='icon'>Offers and promos</div>
         <div className='icon'>Supports and tools</div>
         </div>
-        <h1>Filters</h1>
+        <h2>Filters</h2>
         <div className='filters'>
           <Checkbox/>Eatery<div className='eatery'></div>
           <Checkbox/>Grooming Services<div className='grooming'></div>
