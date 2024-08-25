@@ -173,7 +173,7 @@
   display: flex;
   justify-content: space-between; /* Space buttons evenly */
   position: absolute; /* Position it at the bottom */
-  padding-top: 0px;
+  padding-top: 2px;
   left: 1rem;
   bottom: 12rem; /* Push it further down */
   right: 1rem;
