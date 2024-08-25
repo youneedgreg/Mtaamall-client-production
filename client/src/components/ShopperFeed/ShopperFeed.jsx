@@ -72,7 +72,6 @@ const ShopCard = ({ card }) => {
         </div>
       </div>
       <div className="shop-card-details">
-        <div className="partition" style={{paddingBottom: "1px"}}>
         <div className="shop-card-images">
           {card.images && card.images.length > 0 && (
             <>
@@ -95,8 +94,6 @@ const ShopCard = ({ card }) => {
           </p>
           <p className="shop-card-description">{truncate(card.sdescription, { length: 150 })}</p>
         </div>
-        </div>
-        <div style={{height: "20px"}}></div>
         <div className="shop-card-meta">
           <button className="shop-card-call"><FaWhatsapp size={20}/>Message</button>
           <button className="shop-card-call"><IoCallOutline size={20}/>Call Us</button>
