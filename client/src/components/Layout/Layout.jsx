@@ -8,8 +8,6 @@ import { useMutation } from "react-query";
 import { createUser } from "../../utils/api";
 import useFavourites from "../../hooks/useFavourites";
 import useBookings from "../../hooks/useBookings";
-import { useLocation } from "react-router-dom";
-
 
 const Layout = () => {
 
