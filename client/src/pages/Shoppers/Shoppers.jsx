@@ -70,7 +70,7 @@ const Shoppers = ({ card }) => {
   return (
     <div className="shoppers-container">
       <div className="left-column">
-        <div className='icons'>
+        <div className='icons' style={{paddingTop: "1vw"}}>
         <div className='icon'>Home</div>
         <div className='icon'>Saved stores</div>
         <div className='icon'>New Stores</div>
@@ -78,7 +78,7 @@ const Shoppers = ({ card }) => {
         <div className='icon'>Offers and promos</div>
         <div className='icon'>Supports and tools</div>
         </div>
-        <h2>Filters</h2>
+        <h2><u>Filters</u></h2>
         <div className='filters'>
           <Checkbox/>Eatery<div className='eatery'></div>
           <Checkbox/>Grooming Services<div className='grooming'></div>
