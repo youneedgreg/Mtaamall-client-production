@@ -72,7 +72,7 @@ const ShopCard = ({ card }) => {
         </div>
       </div>
       <div className="shop-card-details">
-        <div className="partition">
+        <div className="partition" style={{paddingBottom: "1px"}}>
         <div className="shop-card-images">
           {card.images && card.images.length > 0 && (
             <>
