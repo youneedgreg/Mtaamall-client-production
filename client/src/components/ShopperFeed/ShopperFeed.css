@@ -96,6 +96,7 @@
 .shop-card-images {
   position: absolute;
   width: 50%;
+  bottom: 148px;
   height: 39%;
   right: 1rem;
   transform: translateY(-50%);
