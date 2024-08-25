@@ -70,7 +70,7 @@ const Shoppers = ({ card }) => {
   return (
     <div className="shoppers-container">
       <div className="left-column">
-        <div className='icons' style={{paddingTop: "1vw"}}>
+        <div className='icons' style={{paddingTop: "1vw", border: "black"}}>
         <div className='icon'>Home</div>
         <div className='icon'>Saved stores</div>
         <div className='icon'>New Stores</div>
