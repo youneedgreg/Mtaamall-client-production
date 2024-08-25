@@ -12,7 +12,7 @@ const categories = [
   { name: "Eatery", icon: <FaStore size={50} /> },
   { name: "Grooming services", icon: <FaCut size={50} /> },
   { name: "Recreational services", icon: <FaGamepad size={50} /> },
-  { name: "Electronics services", icon: <FaTools size={50} /> },
+  { name: "Services", icon: <FaTools size={50} /> },
   { name: "Photography", icon: <FaCamera size={50} /> }
 ];
 
@@ -80,8 +80,11 @@ const Shoppers = ({ card }) => {
         </div>
         <h1>Filters</h1>
         <div className='filters'>
-          <Checkbox/><div className='Eatery'></div>
-          <Checkbox/><div className='eatery'></div>
+          <Checkbox/>Eatery<div className='eatery'></div>
+          <Checkbox/>Grooming Services<div className='grooming'></div>
+          <Checkbox/>Recreation<div className='recreation'></div>
+          <Checkbox/>Services<div className='services'></div>
+          <Checkbox/>Photography<div className='photography'></div>
         </div>
       </div>
       <div className="middle-column">
