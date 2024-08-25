@@ -100,9 +100,7 @@ const Shoppers = ({ card }) => {
         <div className="icons">
           <div className="icon">Bookings and Appoinments. 1</div>
           <div className="icon">Todays Specials</div>
-          <div className="icon">Businesses to watch</div>
-        </div>
-        {randomShop && (
+          {randomShop && (
           <div 
             className="random-shop" 
             style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
@@ -120,6 +118,26 @@ const Shoppers = ({ card }) => {
             </p>
           </div>
         )}
+          <div className="icon">Businesses to watch</div>
+          {randomShop && (
+          <div 
+            className="random-shop" 
+            style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
+            onClick={() => alert(`Navigating to shop: ${randomShop.title}`)}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <img 
+              src={randomShop.images[0]} 
+              alt={randomShop.title} 
+              style={{ width: '100%', borderRadius: '10px' }} 
+            />
+            <p style={{ textAlign: 'center', marginTop: '10px', fontWeight: 'bold' }}>
+              {randomShop.title}
+            </p>
+          </div>
+        )}
+        </div>
       </div>
     </div>
   );
