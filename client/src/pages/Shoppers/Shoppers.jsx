@@ -4,6 +4,8 @@ import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
 import SearchBar from '../../components/SearchBar/SearchBar';
 import ShopperFeed from '../../components/ShopperFeed/ShopperFeed';
 import { getAllProperties } from '../../utils/api';
+import useProperties from "../../hooks/useProperties";
+import { PuffLoader } from "react-spinners";
 
 const categories = [
   { name: "Eatery", icon: <FaStore size={50} /> },
@@ -13,10 +15,12 @@ const categories = [
   { name: "Photography", icon: <FaCamera size={50} /> }
 ];
 
-const Shoppers = () => {
+const Shoppers = ({ card }) => {
+  const { data, isError, isLoading } = useProperties();
   const [filter, setFilter] = React.useState("");
   const [shops, setShops] = useState([]);
   const [filteredShops, setFilteredShops] = useState([]);
+  const [randomShop, setRandomShop] = useState(null);
 
   useEffect(() => {
     const fetchShops = async () => {
@@ -24,6 +28,10 @@ const Shoppers = () => {
         const data = await getAllProperties();
         setShops(data);
         setFilteredShops(data);
+        // Pick a random shop
+        if (data.length > 0) {
+          setRandomShop(data[Math.floor(Math.random() * data.length)]);
+        }
       } catch (error) {
         console.error("Error fetching shops:", error);
       }
@@ -36,6 +44,27 @@ const Shoppers = () => {
       shops.filter(shop => shop.title.toLowerCase().includes(filter.toLowerCase()))
     );
   }, [filter, shops]);
+
+  if (isError) {
+    return (
+      <div className="wrapper">
+        <span>Error while fetching data</span>
+      </div>
+    );
+  }
+  if (isLoading) {
+    return (
+      <div className="wrapper flexCenter" style={{ height: "60vh" }}>
+        <PuffLoader
+          height="80"
+          width="80"
+          radius={1}
+          color="red"
+          aria-label="puff-loading"
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="shoppers-container">
@@ -54,26 +83,12 @@ const Shoppers = () => {
         </div>
         {/* Categories */}
         <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
-          <div className="category">
-            <FaStore size={50} />
-            <span>Eateries</span>
-          </div>
-          <div className="category">
-            <FaCut size={50} />
-            <span>Grooming</span>
-          </div>
-          <div className="category">
-            <FaGamepad size={50} />
-            <span>Recreation</span>
-          </div>
-          <div className="category">
-            <FaTools size={50} />
-            <span>Services</span>
-          </div>
-          <div className="category">
-            <FaCamera size={50} />
-            <span>Photography</span>
-          </div>
+          {categories.map(category => (
+            <div className="category" key={category.name}>
+              {category.icon}
+              <span>{category.name}</span>
+            </div>
+          ))}
         </div>
         <div className="shops-list">
           {filteredShops.map(shop => (
@@ -82,12 +97,29 @@ const Shoppers = () => {
         </div>
       </div>
       <div className="right-column">
-        {/* Right column content can be added here */}
         <div className="icons">
           <div className="icon">Bookings and Appoinments. 1</div>
           <div className="icon">Todays Specials</div>
           <div className="icon">Businesses to watch</div>
         </div>
+        {randomShop && (
+          <div 
+            className="random-shop" 
+            style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
+            onClick={() => alert(`Navigating to shop: ${randomShop.title}`)}
+            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <img 
+              src={randomShop.images[0]} 
+              alt={randomShop.title} 
+              style={{ width: '100%', borderRadius: '10px' }} 
+            />
+            <p style={{ textAlign: 'center', marginTop: '10px', fontWeight: 'bold' }}>
+              {randomShop.title}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );
