@@ -7,6 +7,9 @@ import { getAllProperties } from '../../utils/api';
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
 import { Checkbox, Container } from '@mantine/core';
+import { IoCallOutline } from "react-icons/io5";
+import { MdOutlineVideoCall } from "react-icons/md";
+import { FaWhatsapp } from "react-icons/fa";
 
 const categories = [
   { name: "Eatery", icon: <FaStore size={50} /> },
@@ -80,11 +83,10 @@ const Shoppers = ({ card }) => {
         </div>
         <h2><u>Contact Us</u></h2>
         <div className='filters'>
-          <Container/>Eatery<div className='eatery'></div>
-          <Checkbox/>Grooming Services<div className='grooming'></div>
-          <Checkbox/>Recreation<div className='recreation'></div>
-          <Checkbox/>Services<div className='services'></div>
-          <Checkbox/>Photography<div className='photography'></div>
+          <IoCallOutline />Call Us<div className='eatery'></div>
+          <MdOutlineVideoCall />Video chat<div className='grooming'></div>
+          <FaWhatsapp />Whatsapp Call<div className='recreation'></div>
+          <p>About us      Services       Business</p>
         </div>
       </div>
       <div className="middle-column">
