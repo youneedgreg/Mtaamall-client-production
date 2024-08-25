@@ -96,6 +96,7 @@ const ShopCard = ({ card }) => {
           <p className="shop-card-description">{truncate(card.sdescription, { length: 150 })}</p>
         </div>
         </div>
+        <div style={{height: "20px"}}></div>
         <div className="shop-card-meta">
           <button className="shop-card-call"><FaWhatsapp size={20}/>Message</button>
           <button className="shop-card-call"><IoCallOutline size={20}/>Call Us</button>
