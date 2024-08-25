@@ -82,10 +82,10 @@ const Shoppers = ({ card }) => {
         <div className='icon'>Supports and tools</div>
         </div>
         <h2><u>Contact Us</u></h2>
-        <div className='filters'>
-          <IoCallOutline />Call Us<div className='eatery'></div>
-          <MdOutlineVideoCall />Video chat<div className='grooming'></div>
-          <FaWhatsapp />Whatsapp Call<div className='recreation'></div>
+        <div className='contacts'>
+          <IoCallOutline />Call Us<div className='call'></div>
+          <MdOutlineVideoCall />Video chat<div className='vid'></div>
+          <FaWhatsapp />Whatsapp Call<div className='app'></div>
           <p>About us      Services       Business</p>
         </div>
       </div>

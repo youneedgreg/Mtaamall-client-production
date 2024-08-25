@@ -143,6 +143,83 @@
   flex-direction: column;
   gap: 1rem;
 }
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contacts div {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacts div:hover {
+  background-color: #ececec;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contacts div svg {
+  margin-right: 10px;
+  color: #007bff;
+  font-size: 1.5rem;
+}
+
+.contacts p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.contacts div.call,
+.contacts div.vid,
+.contacts div.app {
+  flex: 1;
+  text-align: center;
+}
+
+.contacts div.call {
+  color: #28a745; /* Green for Call Us */
+}
+
+.contacts div.vid {
+  color: #dc3545; /* Red for Video Chat */
+}
+
+.contacts div.app {
+  color: #25D366; /* WhatsApp green */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contacts {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .contacts div {
+    padding: 8px;
+  }
+
+  .contacts div svg {
+    font-size: 1.3rem;
+  }
+
+  .contacts p {
+    font-size: 0.8rem;
+  }
+}
 
 /* Hide left and right columns on smaller screens */
 @media (max-width: 768px) {
