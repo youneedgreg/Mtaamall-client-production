@@ -85,8 +85,7 @@ const Shoppers = ({ card }) => {
         <div className='contacts'>
           <IoCallOutline />Call Us<div className='call'></div>
           <MdOutlineVideoCall />Video chat<div className='vid'></div>
-          <FaWhatsapp />Whatsapp Call<div className='app'></div>
-          <p>About us      Services       Business</p>
+          <FaWhatsapp />Whatsapp<div className='app'></div>
         </div>
       </div>
       <div className="middle-column">
