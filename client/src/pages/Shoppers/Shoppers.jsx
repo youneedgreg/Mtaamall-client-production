@@ -69,12 +69,12 @@ const Shoppers = ({ card }) => {
   return (
     <div className="shoppers-container">
       <div className="left-column">
-        <div className='one'>Home</div>
-        <div className='one'>Saved stores</div>
-        <div className='one'>New Stores</div>
-        <div className='one'>Connects</div>
-        <div className='one'>Offers and promos</div>
-        <div className='one'>Supports and tools</div>
+        <div className='icon'>Home</div>
+        <div className='icon'>Saved stores</div>
+        <div className='icon'>New Stores</div>
+        <div className='icon'>Connects</div>
+        <div className='icon'>Offers and promos</div>
+        <div className='icon'>Supports and tools</div>
       </div>
       <div className="middle-column">
         <div className="search-bar-wrapper">
