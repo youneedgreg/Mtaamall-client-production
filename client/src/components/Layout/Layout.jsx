@@ -1,21 +1,24 @@
 import React, { useContext, useEffect } from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";  // Updated import
 import { useAuth0 } from "@auth0/auth0-react";
 import UserDetailContext from "../../context/UserDetailContext";
 import { useMutation } from "react-query";
 import { createUser } from "../../utils/api";
 import useFavourites from "../../hooks/useFavourites";
 import useBookings from "../../hooks/useBookings";
+import { useLocation } from "react-router-dom";
+
 
 const Layout = () => {
 
-  useFavourites()
-  useBookings()
+  useFavourites();
+  useBookings();
 
-  const { isAuthenticated, user, getAccessTokenWithPopup} = useAuth0();
+  const { isAuthenticated, user, getAccessTokenWithPopup } = useAuth0();
   const { setUserDetails } = useContext(UserDetailContext);
+  const location = useLocation();  // Get current location
 
   const { mutate } = useMutation({
     mutationKey: [user?.email],
@@ -23,8 +26,7 @@ const Layout = () => {
   });
 
   useEffect(() => {
-    const getTokenAndRegsiter = async () => {
-
+    const getTokenAndRegister = async () => {
       const res = await getAccessTokenWithPopup({
         authorizationParams: {
           audience: "https://dev-spp8057zfmej1qlr.us.auth0.com/api/v2/",
@@ -33,11 +35,10 @@ const Layout = () => {
       });
       localStorage.setItem("access_token", res);
       setUserDetails((prev) => ({ ...prev, token: res }));
-      mutate(res)
+      mutate(res);
     };
 
-
-    isAuthenticated && getTokenAndRegsiter();
+    isAuthenticated && getTokenAndRegister();
   }, [isAuthenticated]);
 
   return (
@@ -46,7 +47,8 @@ const Layout = () => {
         <Header />
         <Outlet />
       </div>
-      <Footer />
+      {/* Conditionally render Footer based on the current path */}
+      {location.pathname !== "/shoppers" && <Footer />}
     </>
   );
 };
