@@ -69,12 +69,14 @@ const Shoppers = ({ card }) => {
   return (
     <div className="shoppers-container">
       <div className="left-column">
+        <div className='icons'>
         <div className='icon'>Home</div>
         <div className='icon'>Saved stores</div>
         <div className='icon'>New Stores</div>
         <div className='icon'>Connects</div>
         <div className='icon'>Offers and promos</div>
         <div className='icon'>Supports and tools</div>
+        </div>
       </div>
       <div className="middle-column">
         <div className="search-bar-wrapper">
@@ -96,7 +98,7 @@ const Shoppers = ({ card }) => {
       </div>
       <div className="right-column">
         <div className="icons">
-          <div className="one">Bookings and Appoinments. 1</div>
+          <div className="one">Bookings and Appoinments</div>
           <div className="icon section-heading">Today's Specials</div>
           {randomShop && (
             <div 
