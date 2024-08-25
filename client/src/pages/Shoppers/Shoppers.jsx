@@ -69,7 +69,6 @@ const Shoppers = ({ card }) => {
   return (
     <div className="shoppers-container">
       <div className="left-column">
-        {/* Left column content can be added here */}
         <div className='one'>Home</div>
         <div className='one'>Saved stores</div>
         <div className='one'>New Stores</div>
@@ -81,7 +80,6 @@ const Shoppers = ({ card }) => {
         <div className="search-bar-wrapper">
           <SearchBar filter={filter} setFilter={setFilter} />
         </div>
-        {/* Categories */}
         <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
           {categories.map(category => (
             <div className="category" key={category.name}>
@@ -98,45 +96,43 @@ const Shoppers = ({ card }) => {
       </div>
       <div className="right-column">
         <div className="icons">
-          <div className="icon">Bookings and Appoinments. 1</div>
-          <div className="icon">Todays Specials</div>
+          <div className="one">Bookings and Appoinments. 1</div>
+          <div className="icon section-heading">Today's Specials</div>
           {randomShop && (
-          <div 
-            className="random-shop" 
-            style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
-            onClick={() => alert(`Navigating to shop: ${randomShop.title}`)}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          >
-            <img 
-              src={randomShop.images[0]} 
-              alt={randomShop.title} 
-              style={{ width: '100%', borderRadius: '10px' }} 
-            />
-            <p style={{ textAlign: 'center', marginTop: '10px', fontWeight: 'bold' }}>
-              {randomShop.title}
-            </p>
-          </div>
-        )}
-          <div className="icon">Businesses to watch</div>
+            <div 
+              className="random-shop" 
+              onClick={() => alert(`Navigating to shop: ${randomShop.title}`)}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+              <img 
+                src={randomShop.images[0]} 
+                alt={randomShop.title} 
+                className="random-shop-image"
+              />
+              <p className="random-shop-title">
+                {randomShop.title}
+              </p>
+            </div>
+          )}
+          <div className="icon section-heading">Businesses to Watch</div>
           {randomShop && (
-          <div 
-            className="random-shop" 
-            style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
-            onClick={() => alert(`Navigating to shop: ${randomShop.title}`)}
-            onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          >
-            <img 
-              src={randomShop.images[0]} 
-              alt={randomShop.title} 
-              style={{ width: '100%', borderRadius: '10px' }} 
-            />
-            <p style={{ textAlign: 'center', marginTop: '10px', fontWeight: 'bold' }}>
-              {randomShop.title}
-            </p>
-          </div>
-        )}
+            <div 
+              className="random-shop" 
+              onClick={() => alert(`Navigating to shop: ${randomShop.title}`)}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+              <img 
+                src={randomShop.images[0]} 
+                alt={randomShop.title} 
+                className="random-shop-image"
+              />
+              <p className="random-shop-title">
+                {randomShop.title}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </div>
