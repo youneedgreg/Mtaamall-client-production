@@ -72,6 +72,7 @@ const ShopCard = ({ card }) => {
         </div>
       </div>
       <div className="shop-card-details">
+        <div className="partition">
         <div className="shop-card-images">
           {card.images && card.images.length > 0 && (
             <>
@@ -93,6 +94,7 @@ const ShopCard = ({ card }) => {
             About <span className="shop-card-title">{card.title}</span>
           </p>
           <p className="shop-card-description">{truncate(card.sdescription, { length: 150 })}</p>
+        </div>
         </div>
         <div className="shop-card-meta">
           <button className="shop-card-call"><FaWhatsapp size={20}/>Message</button>
