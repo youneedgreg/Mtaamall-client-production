@@ -6,6 +6,7 @@ import ShopperFeed from '../../components/ShopperFeed/ShopperFeed';
 import { getAllProperties } from '../../utils/api';
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
+import { Checkbox } from '@mantine/core';
 
 const categories = [
   { name: "Eatery", icon: <FaStore size={50} /> },
@@ -76,6 +77,11 @@ const Shoppers = ({ card }) => {
         <div className='icon'>Connects</div>
         <div className='icon'>Offers and promos</div>
         <div className='icon'>Supports and tools</div>
+        </div>
+        <h1>Filters</h1>
+        <div className='filters'>
+          <Checkbox/><div className='Eatery'></div>
+          <Checkbox/><div className='eatery'></div>
         </div>
       </div>
       <div className="middle-column">
