@@ -96,3 +96,50 @@
   object-fit: cover;
   border-radius: 1vw;
 }
+/* Adjustments for mobile screens */
+@media (max-width: 768px) {
+  /* Welcome text adjustments */
+  .welcome-text h2 {
+    font-size: 5vw; /* Increase font size for mobile screens */
+  }
+
+  .welcome-text p {
+    font-size: 3.5vw; /* Increase font size for mobile screens */
+  }
+
+  /* Categories adjustments */
+  .categories {
+    gap: 2vw; /* Increase gap between categories on mobile */
+    padding: 2vw 3vw; /* Adjust padding for better spacing */
+  }
+
+  .category svg {
+    width: 5vw; /* Reduce icon width for mobile screens */
+    height: 5vw; /* Reduce icon height for mobile screens */
+    padding: 1vw; /* Adjust padding to maintain circular border */
+  }
+
+  .category span {
+    font-size: 3vw; /* Adjust font size for category names */
+  }
+
+  /* Banners adjustments */
+  .banners {
+    flex-direction: column; /* Stack banners vertically on mobile */
+    gap: 2vw; /* Increase gap between banners */
+  }
+
+  .banner {
+    width: 100%; /* Ensure banners take full width on mobile */
+    padding: 4vw; /* Increase padding for banners */
+  }
+
+  .banner img {
+    width: 60vw; /* Adjust image width for mobile */
+    height: 60vw; /* Adjust image height for mobile */
+  }
+
+  .banner span {
+    font-size: 4vw; /* Adjust font size for banner text */
+  }
+}
