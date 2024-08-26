@@ -42,8 +42,8 @@ const Header = () => {
           }}
         >
           <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
-            {!isAuthenticated && <a href="https://business-mtaamall.vercel.app">Business</a>}
-            <a href="mailto:gregorytemwa1212@gmail.com">Contact us</a>
+            {!isAuthenticated && <a href="https://business-mtaamall.vercel.app" style={{color: "Black"}}>Business</a>}
+            <a href="mailto:gregorytemwa1212@gmail.com" style={{color: "red"}}>Contact us</a>
             {/* login button */}
             {!isAuthenticated ? (
               <button className="button" onClick={loginWithRedirect}>
