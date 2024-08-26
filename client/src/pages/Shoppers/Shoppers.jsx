@@ -1,15 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import './Shoppers.css';
-import { FaStore, FaCut, FaGamepad, FaTools, FaCamera } from "react-icons/fa";
+import { FaStore, FaCut, FaGamepad, FaTools, FaCamera, FaBell, FaBookmark, FaHome } from "react-icons/fa";
 import SearchBar from '../../components/SearchBar/SearchBar';
 import ShopperFeed from '../../components/ShopperFeed/ShopperFeed';
 import { getAllProperties } from '../../utils/api';
 import useProperties from "../../hooks/useProperties";
 import { PuffLoader } from "react-spinners";
-import { Checkbox, Container } from '@mantine/core';
 import { IoCallOutline } from "react-icons/io5";
 import { MdOutlineVideoCall } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineLocalOffer } from "react-icons/md";
+import { MdOutlineNotificationsActive } from "react-icons/md";
+import { MdOutlineSupportAgent } from "react-icons/md";
 
 const categories = [
   { name: "Eatery", icon: <FaStore size={50} /> },
@@ -74,12 +76,12 @@ const Shoppers = ({ card }) => {
     <div className="shoppers-container">
       <div className="left-column">
         <div className='icons' style={{paddingTop: "1vw", border: "black"}}>
-        <div className='icon'>Home</div>
-        <div className='icon'>Saved stores</div>
-        <div className='icon'>New Stores</div>
-        <div className='icon'>Connects</div>
-        <div className='icon'>Offers and promos</div>
-        <div className='icon'>Supports and tools</div>
+          <div className='icon'>Home</div>
+          <div className='icon'>Saved stores</div>
+          <div className='icon'>New Stores</div>
+          <div className='icon'>Connects</div>
+          <div className='icon'>Offers and promos</div>
+          <div className='icon'>Supports and tools</div>
         </div>
         <h2><u>Contact Us</u></h2>
         <div className='contacts'>
@@ -93,19 +95,16 @@ const Shoppers = ({ card }) => {
           <SearchBar filter={filter} setFilter={setFilter} />
         </div>
         <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
-  {categories.map(category => {
-    // Extract the first word from the category name
-    const firstWord = category.name.split(' ')[0];
-
-    return (
-      <div className="category" key={category.name}>
-        {category.icon}
-        <span>{firstWord}</span>
-      </div>
-    );
-  })}
-</div>
-
+          {categories.map(category => {
+            const firstWord = category.name.split(' ')[0];
+            return (
+              <div className="category" key={category.name}>
+                {category.icon}
+                <span>{firstWord}</span>
+              </div>
+            );
+          })}
+        </div>
         <div className="shops-list">
           {filteredShops.map(shop => (
             <ShopperFeed key={shop.id} card={shop} />
@@ -114,7 +113,7 @@ const Shoppers = ({ card }) => {
       </div>
       <div className="right-column">
         <div className="icons">
-          <div className="one">Bookings and Appoinments</div>
+          <div className="one">Bookings and Appointments</div>
           <div className="icon section-heading">Today's Specials</div>
           {randomShop && (
             <div 
@@ -152,6 +151,13 @@ const Shoppers = ({ card }) => {
             </div>
           )}
         </div>
+      </div>
+      <div className="bottom-bar">
+        <div className="bottom-icon"><FaHome /></div>
+        <div className="bottom-icon"><MdOutlineLocalOffer /></div>
+        <div className="bottom-icon"><FaBookmark /></div>
+        <div className="bottom-icon"><MdOutlineNotificationsActive /></div>
+        <div className="bottom-icon"><MdOutlineSupportAgent /></div>
       </div>
     </div>
   );
