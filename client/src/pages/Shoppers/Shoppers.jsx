@@ -93,13 +93,19 @@ const Shoppers = ({ card }) => {
           <SearchBar filter={filter} setFilter={setFilter} />
         </div>
         <div className="flexCenter categories" style={{ backgroundColor: 'white'}}>
-          {categories.map(category => (
-            <div className="category" key={category.name}>
-              {category.icon}
-              <span>{category.name}</span>
-            </div>
-          ))}
-        </div>
+  {categories.map(category => {
+    // Extract the first word from the category name
+    const firstWord = category.name.split(' ')[0];
+
+    return (
+      <div className="category" key={category.name}>
+        {category.icon}
+        <span>{firstWord}</span>
+      </div>
+    );
+  })}
+</div>
+
         <div className="shops-list">
           {filteredShops.map(shop => (
             <ShopperFeed key={shop.id} card={shop} />

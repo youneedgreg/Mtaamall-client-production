@@ -231,4 +231,36 @@
     flex: 1;
     padding: 20px;
   }
+  .categories {
+    flex-wrap: nowrap; /* Ensure categories stay in a single row */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    padding: 5px 10px; /* Adjust padding for smaller screens */
+    border-width: 1px; /* Thinner border for smaller screens */
+  }
+
+  .category {
+    flex: 1 0 auto; /* Allow categories to shrink if needed */
+    min-width: 80px; /* Minimum width for each category */
+  }
+
+  .category svg {
+    width: 25px; /* Smaller icons on smaller screens */
+    height: 25px;
+  }
+
+  .category span {
+    font-size: 0.8rem; /* Smaller text on smaller screens */
+  }
+}
+
+/* Additional Media Query for Very Small Screens */
+@media (max-width: 480px) {
+  .category svg {
+    width: 20px; /* Even smaller icons for very small screens */
+    height: 20px;
+  }
+
+  .category span {
+    font-size: 0.7rem; /* Further reduced text size */
+  }
 }
