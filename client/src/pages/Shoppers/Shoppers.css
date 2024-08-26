@@ -244,12 +244,12 @@
   }
 
   .category svg {
-    width: 25px; /* Smaller icons on smaller screens */
-    height: 25px;
+    width: 35px; /* Smaller icons on smaller screens */
+    height: 35px;
   }
 
   .category span {
-    font-size: 0.8rem; /* Smaller text on smaller screens */
+    font-size: 1.2rem; /* Smaller text on smaller screens */
   }
 }
 
