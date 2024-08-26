@@ -256,11 +256,11 @@
 /* Additional Media Query for Very Small Screens */
 @media (max-width: 480px) {
   .category svg {
-    width: 20px; /* Even smaller icons for very small screens */
-    height: 20px;
+    width: 30px; /* Smaller icons on smaller screens */
+    height: 30px;
   }
 
   .category span {
-    font-size: 0.7rem; /* Further reduced text size */
+    font-size: 1rem; /* Smaller text on smaller screens */
   }
 }
