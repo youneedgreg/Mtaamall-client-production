@@ -48,7 +48,7 @@ const Hero1 = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ duration: 0.3 }}
             >
-              <img src="./hero-image.jpeg" alt="MtaaMall logo" />
+              <img src="./market.png" alt="MtaaMall logo" />
               <span>Find Stores</span>
             </motion.div>
           </Link>
